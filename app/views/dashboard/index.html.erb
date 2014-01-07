@@ -1,44 +1,6 @@
-<!DOCTYPE html>
-<html>
 <div id="wrapper">
-  <head>
-    <meta charset="utf-8">
-  </head>
-
-  <body>
-    <h1>Inbox</h1>
-    <div id="content-main">
-      <article>
-        <div id="smartbox">
-          <div id="klout">
-            <p>Klout</p>
-          </div>
-          <div id="tweeter_image">
-            <%= image_tag current_user.image, :id => "user_image" %>
-          </div>
-          <div id="tweet_text">
-            <p> Sample tweet</p>
-          </div>
-          <div id="sort_options">
-            <div id="timestamp">
-              <p>timestamp</p>
-            </div>
-            <div id="retweet">
-              <p>T</p>
-            </div>
-            <div id="starred">
-              <p>S</p>
-            </div>
-            <div id="respond">
-              <p>R</p>
-            </div>
-            <div id="archive">
-              <p>A</p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </body>
+  <h1>Inbox</h1>
+  <div id="content-main">
+    <%= render partial: "smartbox", collection: @tweets %>
+  </div>
 </div>
-</html>
