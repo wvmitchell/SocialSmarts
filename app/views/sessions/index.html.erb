@@ -1,0 +1,15 @@
+<h1>SocialSmart</h1>
+
+<% if current_user %>
+  Welcome <%= current_user.name %>!
+  <%= button_to "Sign Out", signout_path, method: "get" %>
+<% else %>
+  <%= button_to "Sign in with Twitter", "/auth/twitter", method: "get" %>
+<% end %>
+
+<div id="testimonials">
+  <h2>Testimonials</h2>
+  <blockquote>
+    "Social Smart makes my job so much easier!"
+  </blockquote>
+</div>
