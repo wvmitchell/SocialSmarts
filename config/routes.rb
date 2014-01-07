@@ -1,8 +1,10 @@
 SocialSmarts::Application.routes.draw do
 
-  root to: "sessions#index"
+  root to: "dashboard#index"
 
   get 'home' => 'dashboard#index'
+
+  get 'login' => 'sessions#index'
 
   match "/auth/:provider/callback" => "sessions#create", via: :get
   match "/signout" => "sessions#destroy", :as => :signout, via: :get
