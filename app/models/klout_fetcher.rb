@@ -1,5 +1,3 @@
-require 'pry'
-
 class KloutFetcher
 
   BASE_URL = "http://api.klout.com/v2/"
