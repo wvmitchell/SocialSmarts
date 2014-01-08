@@ -1,3 +1,11 @@
-<%= image_tag current_user.image %>
-<%= current_user.nickname %>
-<%= current_user.location %>
+<header>
+  <div class="header_content">
+    <%= image_tag current_user.image %>
+    <%= current_user.nickname %>
+    <%= current_user.location %>
+
+    <% if current_user %>
+      <%= link_to "Signout", signout_path %>
+    <% end %>
+  </div>
+</header>
