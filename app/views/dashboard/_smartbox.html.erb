@@ -1,7 +1,7 @@
 <% @tweets.each do |tweet| %>
   <div class="smartbox">
     <div class="klout">
-      <p><%= @klout.get_score_for(tweet.user.username).round %></p>
+      <p><%= display_klout_score(@klout, tweet.user) %></p>
     </div>
     <div class="tweeter_image">
       <%= image_tag tweet.user.profile_image_uri, :class => "user_image" %>
