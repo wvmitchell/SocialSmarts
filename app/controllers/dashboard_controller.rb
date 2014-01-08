@@ -5,6 +5,7 @@ class DashboardController < ApplicationController
     if current_user
       tweeter = TweetFetcher.new
       @tweets = tweeter.find_tweets_mentioning(current_user.nickname)
+      @klout = KloutFetcher.new
     end
   end
 

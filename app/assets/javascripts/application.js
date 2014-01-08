@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function changeColor() {
+  $(".klout").click(function(){
+    $("div.klout").addClass('green')
+  });
+})
