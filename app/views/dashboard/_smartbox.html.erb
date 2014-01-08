@@ -1,12 +1,13 @@
 <% @tweets.each do |tweet| %>
   <div class="smartbox">
     <div class="klout">
-      <p>Klout</p>
+      <p><%= @klout.get_score_for(tweet.user.username).round %></p>
     </div>
     <div class="tweeter_image">
-      <%= image_tag current_user.image, :class => "user_image" %>
+      <%= image_tag tweet.user.profile_image_uri, :class => "user_image" %>
     </div>
     <div class="tweet_text">
+      <p><%= "@" + tweet.user.username %></p>
       <p><%= tweet.text %></p>
     </div>
     <div class="sort_options">
