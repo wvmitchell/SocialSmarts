@@ -34,12 +34,12 @@ h1 {
   font-size: 1.3em;
 }
 
-header {
-  position: fixed; 
+#header {
+  position: fixed;
   top: 0; 
   left: 0; 
 
-  min-width: 100%;
+  width: 100%;
   height: 65px;
   background-position: top;
   background-color: #2C2E2E;
@@ -47,9 +47,14 @@ header {
 }
 
 .header_content {
-  padding: 8px;
-  padding-right: 637px;
-  text-align: center;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: left;
+  width: 858px; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
 }
 
 body {
