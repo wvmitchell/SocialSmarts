@@ -10,10 +10,6 @@
 
 <%= render partial: 'layouts/user_badge' if current_user %>
 
-<% if current_user %>
-  <%= link_to "Signout", signout_path %>
-<% end %>
-
 <%= yield %>
 
 </body>
