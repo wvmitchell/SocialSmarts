@@ -1,16 +1,24 @@
 <% @tweets.each do |tweet| %>
   <div class="smartbox">
+
     <div class="klout">
-      <p><%= display_klout_score(@klout, tweet.user) %></p>
+      <% if display_klout_score(@klout, tweet.user) > 50 %>
+        <p id="klout_color"><%= display_klout_score(@klout, tweet.user) %></p>
+      <% else %>
+        <p><%= display_klout_score(@klout, tweet.user) %></p>      
+      <% end %>
     </div>
+
     <div class="tweeter_image">
       <circle cx="284" cy="213" r="213" />
       <%= image_tag tweet.user.profile_image_uri, :class => "user_image" %>
     </div>
+
     <div class="tweet_text">
       <strong><p><%= "@" + tweet.user.username %></p></strong>
       <p><%= tweet.text %></p>
     </div>
+
     <div class="sort_options">
       <div class="timestamp">
         <p>timestamp</p>
@@ -22,11 +30,31 @@
         <p>S</p>
       </div>
       <div class="respond">
-        <p>R</p>
+        <p id="reply">R</p>
       </div>
       <div class="archive">
         <p>A</p>
       </div>
     </div>
+
+    <div class="hidden" id="reply_dropdown">
+      <p>dropdown reply text field goes here. eventually.</p>
+    </div>
+
   </div>
 <% end %>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $(".respond").on("click", function(){
+
+    var sort_options = $(this).parent(".sort_options");
+    var smartbox = sort_options.parent(".smartbox");
+    var reply_dropdown = smartbox.children("#reply_dropdown");
+
+    reply_dropdown.toggleClass("hidden");
+  })
+})  
+
+</script>
