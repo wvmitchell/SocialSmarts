@@ -9,8 +9,8 @@ describe "dashboard index" do
   end
 
   it "archives mentions" do
-    visit login_path
     FactoryGirl.create(:mention)
+    visit login_path
     click_on "Sign in with Twitter"
     expect(page).to have_content 'This is a Tweet'
   end
