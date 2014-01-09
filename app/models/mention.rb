@@ -14,7 +14,7 @@ class Mention < ActiveRecord::Base
       m.profile_image_uri = tweet.user.profile_image_uri.to_s
       m.username = tweet.user.username
       m.message = tweet.text
-      m.klout = kf.get_score_for(user)
+      m.klout = kf.get_score_for(user.nickname)
       m.hash_id = Digest::SHA1.hexdigest(m.username + m.message)
       m.tweet_timestamp = tweet.created_at
       m.save
