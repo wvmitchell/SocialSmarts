@@ -7,4 +7,6 @@ describe "dashboard index" do
     click_on "Sign in with Twitter"
     expect(page).to have_content 'Inbox'
   end
+
+
 end
