@@ -24,4 +24,9 @@ class Mention < ActiveRecord::Base
   def self.get_latest_mentions_for(user)
     self.where(user_id: user.id)
   end
+
+  def pretty_time
+    time = Time.at(tweet_timestamp).to_formatted_s(:long_ordinal)
+
+  end
 end
