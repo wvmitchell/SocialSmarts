@@ -1,7 +1,7 @@
 <% @mentions.each do |mention| %>
   <div class="smartbox">
     <div class="klout">
-      <p><%= mention.klout %></p>
+      <p><%= mention.klout.round %></p>
     </div>
     <div class="tweeter_image">
       <%= image_tag mention.profile_image_uri, :class => "user_image" %>
