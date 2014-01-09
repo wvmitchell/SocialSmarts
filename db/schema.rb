@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109180227) do
+ActiveRecord::Schema.define(version: 20140109190001) do
 
   create_table "mentions", force: true do |t|
     t.string   "hash_id"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140109180227) do
     t.boolean  "flag"
     t.boolean  "should_respond"
     t.boolean  "responded"
-    t.boolean  "archived"
+    t.boolean  "archived",          default: false
     t.boolean  "favorited"
     t.datetime "created_at"
     t.datetime "updated_at"

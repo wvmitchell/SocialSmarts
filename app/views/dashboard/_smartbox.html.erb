@@ -1,15 +1,24 @@
 <% @mentions.each do |mention| %>
   <div class="smartbox">
+
     <div class="klout">
-      <p><%= mention.klout.round %></p>
+      <% if mention.klout.round > 50 %>
+        <p id="klout_color"><%= mention.klout.round %></p>
+      <% else %>
+        <p><%= mention.klout.round %></p>
+      <% end %>
     </div>
+
     <div class="tweeter_image">
-      <%= image_tag mention.profile_image_uri, :class => "user_image" %>
+      <circle cx="284" cy="213" r="213" />
+        <%= image_tag mention.profile_image_uri, :class => "user_image" %>
     </div>
+
     <div class="tweet_text">
-      <p><%= "@" + mention.username %></p>
+      <strong><p><%= "@" + mention.username %></p></strong>
       <p><%= mention.message %></p>
     </div>
+
     <div class="sort_options">
       <div class="timestamp">
         <p><%= mention.pretty_time %></p>
@@ -21,11 +30,31 @@
         <p>S</p>
       </div>
       <div class="respond">
-        <p>R</p>
+        <p id="reply">R</p>
       </div>
       <div class="archive">
         <p>A</p>
       </div>
     </div>
+
+    <div class="hidden" id="reply_dropdown">
+      <p>dropdown reply text field goes here. eventually.</p>
+    </div>
+
   </div>
 <% end %>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $(".respond").on("click", function(){
+
+    var sort_options = $(this).parent(".sort_options");
+    var smartbox = sort_options.parent(".smartbox");
+    var reply_dropdown = smartbox.children("#reply_dropdown");
+
+    reply_dropdown.toggleClass("hidden");
+  })
+})  
+
+</script>

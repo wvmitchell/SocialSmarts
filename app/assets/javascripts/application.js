@@ -20,3 +20,17 @@ $(function changeColor() {
     $("div.klout").addClass('green')
   });
 })
+
+// $(function() {
+//   $( "#reply").click(function(){
+//     $
+//   });
+// });
+
+// $("#reply").click(function(){
+//   $("#reply").hide();
+// });
+
+// $("#reply").click(function(){
+//   $("#reply").show();
+// });

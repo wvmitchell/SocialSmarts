@@ -3,28 +3,49 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #wrapper {
-  position: relative;
-  width: 830px;
+  background-color: #DBF0F4;
   height: auto;
   min-height: 100%;
-  padding: 10px 14px 15px;
   margin: 0 auto;
   margin-top: 65px;
-  background-color: #D7DFE0;
+  padding: 0px 14px 15px;
+  position: relative;
   overflow: hidden;
+  width: 830px;
+}
+
+#sort_tab_bar {
+  background-color: #B8E3ED;
+  height: 50px;
+  margin:0;
+  padding:0;
+  position: fixed;
+  top: 60; 
+  width: 830px;
+  z-index: 1;
+}
+
+.sort_tab_names li {
+  display: inline;
+  float: left;
+  list-style:none;
+  list-style-type:none;
+  list-style-image:none;
+  text-align:center;
+  width:195px;
 }
 
 #content-main {
-  width: 750;
+  background-color: white;
+  border-color: #E4EAEB;
+  border-style: solid;
+  border-width: 1px;
   height: auto;
   min-height: 100%;
-  padding: 10px;
-  position: relative;
-  background-color: white;
-  border-style: solid;
-  border-color: #E4EAEB;
-  border-width: 1px;
   overflow: hidden;
+  padding: 55px 10px 10px 10px;
+  position: relative;
+  width: 750;
 
   -webkit-border-radius: 5px 5px 5px 5px;
   -moz-border-radius: 5px 5px 5px 5px;
@@ -35,47 +56,72 @@
 }
 
 .smartbox {
-  float: none;
-  width: 750;
   border-color: #E4EAEB;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
+  clip-path: url(profile_image_uri);
+  float: none;
   height: 130px;
+  width: 750;
+  padding: 10px 0px 10px 0px;
 }
 
-.klout, .tweeter_image {
-  float: left;
-  margin: 2px;
-  height: 120px;
-  width: 15%;
-  border-style: dashed;
+.klout {
+  border-style: solid;
   border-width: 2px;
   border-color: white;
+  height: 120px;
+  float: left;
+  font-size: 3.75em;
+  font-align: center;
+  margin: 2px;
+  width: 15%;
+}
+
+#klout_color {
+  color: #35A15B;
+}
+
+.tweeter_image {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  float: left;
+  height: 120px;
+  margin: 2px;
+  width: 15%;
 }
 
 .user_image {
-  width: 100%;
   height: auto;
+  width: 100%;
+
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
 .tweet_text {
-  float: left;
-  margin: 2px;
-  height: 120px;
-  width: 40%;
-  border-style: dashed;
+  border-style: solid;
   border-width: 2px;
   border-color: white;
+  float: left;
+  height: 120px;
+  margin: 2px;
+  width: 40%;
 }
 
 .sort_options {
-  float: left;
-  margin: 2px;
-  height: 120px;
-  width: 26%;
-  border-style: dashed;
+  border-style: solid;
   border-width: 2px;
   border-color: white;
+  float: left;
+  height: 120px;
+  margin: 2px;
+  width: 26%;
 }
 
 .timestamp {
@@ -83,17 +129,39 @@
 }
 
 .retweet, .starred, .respond, .archive {
+  border-style: solid;
+  border-width:  1px;
+  border-color: black;
   float: left;
   height: 40px;
-  width: 8%;
+  margin: 0 auto;
   padding-left: 8%;
   padding-right: 8%;
   position: relative;
   top: 17%;
-  margin: 0 auto;
-  border-style: solid;
-  border-width:  1px;
-  border-color: black;
+  width: 8%;
+}
+
+#reply_dropdown {
+  background-color: #DBF0F4;
+  padding: 5px;
+  padding-left: 15px;
+  position: relative;
+  margin-top: 141px;
+  min-height: 100px;
+  width: 750;
+  z-index: 1;
+
+  -webkit-border-radius: 0px 5px 0px 5px;
+  -moz-border-radius: 0px 5px 0px 5px;
+      border-radius: 0px 5px 0px 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.hidden {
+  display: none;
 }
 
 .red {
