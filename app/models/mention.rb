@@ -11,6 +11,7 @@ class Mention < ActiveRecord::Base
     tweets.each do |tweet|
       m = Mention.new
       m.user_id = user.id
+      m.profile_image_uri = tweet.user.profile_image_uri.to_s
       m.username = tweet.user.username
       m.message = tweet.text
       m.klout = kf.get_score_for(user)
@@ -21,6 +22,6 @@ class Mention < ActiveRecord::Base
   end
 
   def self.get_latest_mentions_for(user)
-    self.where(user_id: user.id).where(archived: false)
+    self.where(user_id: user.id)
   end
 end
