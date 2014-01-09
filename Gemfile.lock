@@ -61,6 +61,11 @@ GEM
       actionmailer (>= 3.0.4)
       activesupport (>= 3.0.4)
     execjs (2.0.2)
+    factory_girl (4.3.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
+      railties (>= 3.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     hashie (2.0.5)
@@ -189,6 +194,7 @@ DEPENDENCIES
   capybara
   capybara-rails
   coffee-rails (~> 4.0.0)
+  factory_girl_rails
   faraday
   jbuilder (~> 1.2)
   jquery-rails
