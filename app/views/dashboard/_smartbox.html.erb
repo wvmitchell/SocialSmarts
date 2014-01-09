@@ -1,18 +1,18 @@
-<% @tweets.each do |tweet| %>
+<% @mentions.each do |mention| %>
   <div class="smartbox">
     <div class="klout">
-      <p><%= display_klout_score(@klout, tweet.user) %></p>
+      <p><%= mention.klout %></p>
     </div>
     <div class="tweeter_image">
-      <%= image_tag tweet.user.profile_image_uri, :class => "user_image" %>
+      <%= image_tag mention.profile_image_uri, :class => "user_image" %>
     </div>
     <div class="tweet_text">
-      <p><%= "@" + tweet.user.username %></p>
-      <p><%= tweet.text %></p>
+      <p><%= "@" + mention.username %></p>
+      <p><%= mention.message %></p>
     </div>
     <div class="sort_options">
       <div class="timestamp">
-        <p>timestamp</p>
+        <p><%= mention.tweet_timestamp %></p>
       </div>
       <div class="retweet">
         <p>T</p>
