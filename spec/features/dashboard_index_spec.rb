@@ -13,5 +13,6 @@ describe "dashboard index" do
     visit login_path
     click_on "Sign in with Twitter"
     expect(page).to have_content 'This is a Tweet'
+    click_on "Archive"
   end
 end
