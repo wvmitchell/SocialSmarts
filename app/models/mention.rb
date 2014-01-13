@@ -1,4 +1,4 @@
-require 'digest'
+  require 'digest'
 
 class Mention < ActiveRecord::Base
   belongs_to :user

@@ -39,7 +39,12 @@
       </div>
     </div>
     <div class="hidden" id="reply_dropdown">
-      <p>dropdown reply text field goes here. eventually.</p>
+      <%= form_tag('/posts') do %>
+        <p>
+          <%=text_area_tag'input reply here' %>
+          <%= submit_tag 'Reply' %>
+        </p>
+      <% end %>
     </div>
 
   </div>
