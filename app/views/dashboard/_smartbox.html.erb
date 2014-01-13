@@ -1,5 +1,6 @@
 <% @mentions.each do |mention| %>
-  <div class="smartbox">
+  <div class="smartbox clearflix">
+    <div class="smartbox-inset">
 
     <div class="klout">
       <% if mention.klout.round > 50 %>
@@ -23,38 +24,23 @@
       <div class="timestamp">
         <p><%= mention.pretty_time %></p>
       </div>
-      <div class="retweet">
-        <p>T</p>
-      </div>
-      <div class="starred">
-        <p>S</p>
-      </div>
-      <div class="respond">
-        <p id="reply">R</p>
-      </div>
-      <div class="archive">
-        <p>A</p>
+        <div class="retweet">
+          <p>T</p>
+        </div>
+        <div class="starred">
+          <p>S</p>
+        </div>
+        <div class="respond">
+          <p id="reply">R</p>
+        </div>
+        <div class="archive">
+          <p>A</p>
+        </div>
       </div>
     </div>
-
     <div class="hidden" id="reply_dropdown">
       <p>dropdown reply text field goes here. eventually.</p>
     </div>
 
   </div>
 <% end %>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-  $(".respond").on("click", function(){
-
-    var sort_options = $(this).parent(".sort_options");
-    var smartbox = sort_options.parent(".smartbox");
-    var reply_dropdown = smartbox.children("#reply_dropdown");
-
-    reply_dropdown.toggleClass("hidden");
-  })
-})
-
-</script>

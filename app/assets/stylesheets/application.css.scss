@@ -58,6 +58,7 @@ h1 {
 
 body {
   background-image:url('ss_bg_pattern.jpg');
+  background-attachment: fixed;
   font-family: $font-family-base;
   font-size: .85em;
   height: 100%;

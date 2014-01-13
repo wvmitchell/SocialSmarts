@@ -21,16 +21,15 @@ $(function changeColor() {
   });
 })
 
-// $(function() {
-//   $( "#reply").click(function(){
-//     $
-//   });
-// });
 
-// $("#reply").click(function(){
-//   $("#reply").hide();
-// });
+$(document).ready(function(){
+  $(".respond").on("click", function(){
 
-// $("#reply").click(function(){
-//   $("#reply").show();
-// });
+    var smartbox = $(this).parents(".smartbox");
+    var reply_dropdown = smartbox.children("#reply_dropdown");
+
+    reply_dropdown.slideToggle(900);
+
+    // reply_dropdown.toggleClass("hidden");
+  })
+})  

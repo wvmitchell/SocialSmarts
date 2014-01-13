@@ -28,11 +28,17 @@
 .sort_tab_names li {
   display: inline;
   float: left;
+  height: 50px;
   list-style:none;
   list-style-type:none;
   list-style-image:none;
+  margin-top: -14px;
   text-align:center;
-  width:195px;
+  width:197px;
+}
+
+.sort_tab_names li:hover {
+  background-color: #8BD5EB;
 }
 
 #content-main {
@@ -58,12 +64,19 @@
 .smartbox {
   border-color: #E4EAEB;
   border-style: solid;
-  border-width: 0px 0px 1px 0px;
+  border-width: 0px 0px 5px 0px;
   clip-path: url(profile_image_uri);
   float: none;
-  height: 130px;
-  width: 750;
-  padding: 10px 0px 10px 0px;
+  width: 805px;
+  padding: 10px 0px 0px 0px;
+  // border: solid 1px;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.smartbox .smartbox-inset {
+  margin-bottom: 10px;
+  float: left;
 }
 
 .klout {
@@ -75,11 +88,12 @@
   font-size: 3.75em;
   font-align: center;
   margin: 2px;
+  text-align: center;
   width: 15%;
 }
 
 #klout_color {
-  color: #35A15B;
+  color: #E7A622;
 }
 
 .tweeter_image {
@@ -139,22 +153,16 @@
   padding-right: 8%;
   position: relative;
   top: 17%;
-  width: 8%;
+  width:10px;
 }
 
 #reply_dropdown {
   background-color: #DBF0F4;
   padding: 5px;
-  padding-left: 15px;
-  position: relative;
-  margin-top: 141px;
-  min-height: 100px;
-  width: 750;
+  clear: left;
+  width: 800px;
   z-index: 1;
 
-  -webkit-border-radius: 0px 5px 0px 5px;
-  -moz-border-radius: 0px 5px 0px 5px;
-      border-radius: 0px 5px 0px 5px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
       box-shadow: 0 1px 2px rgba(0,0,0,.15);
@@ -162,6 +170,7 @@
 
 .hidden {
   display: none;
+  width: 800px;
 }
 
 .red {
