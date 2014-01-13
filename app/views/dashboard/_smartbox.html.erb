@@ -1,28 +1,29 @@
-<% @tweets.each do |tweet| %>
+<% @mentions.each do |mention| %>
   <div class="smartbox clearflix">
     <div class="smartbox-inset">
-      <div class="klout">
-        <% if display_klout_score(@klout, tweet.user) > 50 %>
-          <p id="klout_color"><%= display_klout_score(@klout, tweet.user) %></p>
-        <% else %>
-          <p><%= display_klout_score(@klout, tweet.user) %></p>      
-        <% end %>
-      </div>
 
-      <div class="tweeter_image">
-        <circle cx="284" cy="213" r="213" />
-        <%= image_tag tweet.user.profile_image_uri, :class => "user_image" %>
-      </div>
+    <div class="klout">
+      <% if mention.klout.round > 50 %>
+        <p id="klout_color"><%= mention.klout.round %></p>
+      <% else %>
+        <p><%= mention.klout.round %></p>
+      <% end %>
+    </div>
 
-      <div class="tweet_text">
-        <strong><p><%= "@" + tweet.user.username %></p></strong>
-        <p><%= tweet.text %></p>
-      </div>
+    <div class="tweeter_image">
+      <circle cx="284" cy="213" r="213" />
+        <%= image_tag mention.profile_image_uri, :class => "user_image" %>
+    </div>
 
-      <div class="sort_options">
-        <div class="timestamp">
-          <p>timestamp</p>
-        </div>
+    <div class="tweet_text">
+      <strong><p><%= "@" + mention.username %></p></strong>
+      <p><%= mention.message %></p>
+    </div>
+
+    <div class="sort_options">
+      <div class="timestamp">
+        <p><%= mention.pretty_time %></p>
+      </div>
         <div class="retweet">
           <p>T</p>
         </div>
