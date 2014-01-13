@@ -14,5 +14,6 @@ describe "dashboard index" do
     click_on "Sign in with Twitter"
     expect(page).to have_content 'This is a Tweet'
     click_on "Archive"
+    expect(page).to_not have_content 'This is a Tweet'
   end
 end
