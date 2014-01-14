@@ -5,9 +5,9 @@ class Mention < ActiveRecord::Base
   validates_uniqueness_of :hash_id
 
   def self.add_tweets_for(user)
-    tf = TweetFetcher.new
+    tf = TweetFetcher.new(user)
     kf = KloutFetcher.new
-    tweets = tf.find_tweets_mentioning(user.nickname)
+    tweets = tf.find_tweets_mentioning
     tweets.each do |tweet|
       m = Mention.new
       m.user_id = user.id
