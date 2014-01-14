@@ -41,7 +41,7 @@
     <div class="hidden" id="reply_dropdown">
       <%= form_tag('/posts') do %>
         <p>
-          <%=text_field_tag'respond', nil, :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %>
+          <%=text_area_tag'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %>
           <%= submit_tag 'Reply' %>
         </p>
       <% end %>

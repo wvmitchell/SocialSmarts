@@ -20,21 +20,21 @@
   margin:0;
   padding:0;
   position: fixed;
-  top: 60; 
+  top: 60;
   width: 830px;
   z-index: 1;
 }
 
 .sort_tab_names li {
-  display: inline;
+  position: relative;
   float: left;
-  height: 50px;
+  height: 35px;
   list-style:none;
-  list-style-type:none;
-  list-style-image:none;
+  padding: 15px 20px 0px 19px;
   margin-top: -14px;
+  margin-left: -39px;
   text-align:center;
-  width:197px;
+  width: 197px;
 }
 
 .sort_tab_names li:hover {
@@ -67,6 +67,7 @@
   border-width: 0px 0px 5px 0px;
   clip-path: url(profile_image_uri);
   float: none;
+  position: relative;
   width: 805px;
   padding: 10px 0px 0px 0px;
   // border: solid 1px;
