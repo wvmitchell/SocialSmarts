@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_many :mentions
 
-
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
@@ -10,6 +9,8 @@ class User < ActiveRecord::Base
       user.image = auth["info"]["image"]
       user.nickname = auth["info"]["nickname"]
       user.location = auth["info"]["location"]
+      user.location = auth["extra"]["access_token"].token
+      user.location = auth["extra"]["access_token"].secret
     end
   end
 end
