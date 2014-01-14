@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
       user.image = auth["info"]["image"]
       user.nickname = auth["info"]["nickname"]
       user.location = auth["info"]["location"]
-      user.location = auth["extra"]["access_token"].token
-      user.location = auth["extra"]["access_token"].secret
+      user.access_token = auth["extra"]["access_token"].token
+      user.access_secret = auth["extra"]["access_token"].secret
     end
   end
 end

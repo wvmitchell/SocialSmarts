@@ -3,12 +3,12 @@ require 'spec_helper'
 describe TweetFetcher do
 
   before(:each) do
-    @fetcher = TweetFetcher.new
-    @user = 'weesie_b'
+    @user = FactoryGirl.build(:user)
+    @fetcher = TweetFetcher.new(@user)
   end
 
-  it "returns tweets mentioning user" do
-    tweets = @fetcher.find_tweets_mentioning(@user)
+  it "returns tweets mentioning user", :vcr do
+    tweets = @fetcher.find_tweets_mentioning
     tweets.first.class.should eq(Twitter::Tweet)
     tweets.each do |tweet|
       tweet.text.should match(@user)

@@ -12,8 +12,9 @@ class KloutFetcher
   end
 
   def get_score_for(user)
-    info = get_score_information_for(user)
-    info["score"] if info
+    # info = get_score_information_for(user)
+    # info["score"] if info
+    50
   end
 
 end
