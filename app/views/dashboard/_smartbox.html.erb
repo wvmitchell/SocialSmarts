@@ -35,7 +35,7 @@
         </div>
         <div class="archive">
           <!-- <input type="button" name="Archive" value="Arc" width="30" height="30"/> -->
-          <%= button_to "Archive", :action => "archive"%>
+          <%= button_to "Archive", {:action => "archive", :id => mention.id} %>
           <!-- <button><img src="images/add.gif" alt="Archive" width="30" height="30" /> Archive</button> -->
         </div>
       </div>
