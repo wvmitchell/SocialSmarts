@@ -26,7 +26,6 @@
 }
 
 .sort_tab_names li {
-  position: relative;
   float: left;
   height: 35px;
   list-style:none;
@@ -50,7 +49,6 @@
   min-height: 100%;
   overflow: hidden;
   padding: 55px 10px 10px 10px;
-  position: relative;
   width: 750;
 
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -68,43 +66,39 @@
   clip-path: url(profile_image_uri);
   float: none;
   position: relative;
-  width: 805px;
+  width: 900px;
   padding: 10px 0px 0px 0px;
   // border: solid 1px;
   overflow: hidden;
-  margin-bottom: 0px;
 }
 
 .smartbox .smartbox-inset {
-  margin-bottom: 10px;
   float: left;
 }
 
 .klout {
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
-  height: 120px;
   float: left;
+  margin-top: -35px;
+  height: 40px;
+  width: 140px;
   font-size: 3.75em;
   font-align: center;
-  margin: 2px;
   text-align: center;
-  width: 15%;
 }
 
-#klout_color {
+
+#klout_score {
   color: #E7A622;
 }
 
 .tweeter_image {
+  float: left;
   border-style: solid;
   border-width: 2px;
   border-color: white;
-  float: left;
-  height: 120px;
+  height: 73px;
+  width: 73px;
   margin: 2px;
-  width: 15%;
 }
 
 .user_image {
@@ -124,42 +118,40 @@
   border-width: 2px;
   border-color: white;
   float: left;
-  height: 120px;
-  margin: 2px;
-  width: 40%;
+  margin-top: -14px;
+  height: 80px;
+  width: 370px;
 }
 
 .sort_options {
+  float: right;
   border-style: solid;
   border-width: 2px;
   border-color: white;
-  float: left;
-  height: 120px;
-  margin: 2px;
-  width: 26%;
-}
-
-.timestamp {
+  height: 80px;
+  width: 190px;
   margin: 5px;
 }
 
+.timestamp {
+  text-align: center;
+  margin: 2px;
+}
+
 .retweet, .starred, .respond, .archive {
-  border-style: solid;
-  border-width:  1px;
-  border-color: black;
   float: left;
-  height: 40px;
+  height: 30px;
+  width: 10px;
   margin: 0 auto;
   padding-left: 8%;
   padding-right: 8%;
   position: relative;
   top: 17%;
-  width:10px;
+
 }
 
 #reply_dropdown {
   background-color: #DBF0F4;
-  padding: 5px;
   clear: left;
   width: 800px;
   z-index: 1;
@@ -171,7 +163,7 @@
 
 .hidden {
   display: none;
-  width: 800px;
+  width: 900px;
 }
 
 .red {

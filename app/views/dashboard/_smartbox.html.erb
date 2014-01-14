@@ -4,7 +4,7 @@
 
     <div class="klout">
       <% if mention.klout.round > 50 %>
-        <p id="klout_color"><%= mention.klout.round %></p>
+        <p id="klout_score"><%= mention.klout.round %></p>
       <% else %>
         <p><%= mention.klout.round %></p>
       <% end %>
@@ -25,16 +25,18 @@
         <p><%= mention.pretty_time %></p>
       </div>
         <div class="retweet">
-          <p>T</p>
+          <input type="button" name="Retweet" value="Ret" width="30" height="30"/>
         </div>
         <div class="starred">
-          <p>S</p>
+          <input type="button" name="Flag" value="Flg" width="30" height="30"/>
         </div>
-        <div class="respond">
-          <p id="reply">R</p>
+        <div class="respond" id="reply">
+          <input type="button" name="Respond" value="Res" width="30" height="30"/>
         </div>
         <div class="archive">
-          <p>A</p>
+          <!-- <input type="button" name="Archive" value="Arc" width="30" height="30"/> -->
+          <%= button_to "Archive", :action => "archive"%>
+          <!-- <button><img src="images/add.gif" alt="Archive" width="30" height="30" /> Archive</button> -->
         </div>
       </div>
     </div>
