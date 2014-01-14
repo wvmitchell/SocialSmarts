@@ -1,0 +1,2006 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/mentions_timeline.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Twitter Ruby Gem 5.5.0
+      Authorization:
+      - OAuth oauth_consumer_key="YSeuV5nQGiBDbtKbrWKdQ", oauth_nonce="f1e2670e6dbeef9909c575dd909f1fe4",
+        oauth_signature="v9xTKXXJy9HHSkX16T%2BSeJPWUtg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1389666168", oauth_token="59794266-Ijopb1EtRuBObeDGB7xuvCZGh8Cka2ZJEXfO1OlKv",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '57211'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 14 Jan 2014 02:22:48 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 14 Jan 2014 02:22:48 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tfe
+      Set-Cookie:
+      - guest_id=v1%3A138966616854855570; Domain=.twitter.com; Path=/; Expires=Thu,
+        14-Jan-2016 02:22:48 UTC
+      - lang=en
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1389667068'
+      X-Transaction:
+      - 114b1898c9e2a9e4
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "created_at": "Thu Jan 09 18:20:51 +0000 2014",
+            "id": 421345842830639104,
+            "id_str": "421345842830639104",
+            "text": "Haven't seen @jsl_demo_07 in awhile :(",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "id": 59792365,
+              "id_str": "59792365",
+              "name": "Flaky",
+              "screen_name": "jsl_demo_01",
+              "location": "China,Ilinions",
+              "description": "I like long walks on the beach and am also addicted to crack.",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 34,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:14:13 +0000 2009",
+              "favourites_count": 17,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 810,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/411998787096150016/WxxMdksC_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/411998787096150016/WxxMdksC_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    13,
+                    25
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Thu Jan 09 18:20:36 +0000 2014",
+            "id": 421345778632634368,
+            "id_str": "421345778632634368",
+            "text": "@jsl_demo_07 Whatsup dude?",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59792365,
+              "id_str": "59792365",
+              "name": "Flaky",
+              "screen_name": "jsl_demo_01",
+              "location": "China,Ilinions",
+              "description": "I like long walks on the beach and am also addicted to crack.",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 34,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:14:13 +0000 2009",
+              "favourites_count": 17,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 810,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/411998787096150016/WxxMdksC_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/411998787096150016/WxxMdksC_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sun Dec 15 18:58:52 +0000 2013",
+            "id": 412295713930752000,
+            "id_str": "412295713930752000",
+            "text": "@jsl_demo_07 and everything in it",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793570,
+              "id_str": "59793570",
+              "name": "I LOVE PIE :D",
+              "screen_name": "jsl_demo_04",
+              "location": "East oakland",
+              "description": "THE PIE KING!",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 11,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:19:18 +0000 2009",
+              "favourites_count": 2,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 594,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sun Dec 15 18:58:37 +0000 2013",
+            "id": 412295647081922560,
+            "id_str": "412295647081922560",
+            "text": "@jsl_demo_07 my world is mines",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793570,
+              "id_str": "59793570",
+              "name": "I LOVE PIE :D",
+              "screen_name": "jsl_demo_04",
+              "location": "East oakland",
+              "description": "THE PIE KING!",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 11,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:19:18 +0000 2009",
+              "favourites_count": 2,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 594,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sun Dec 15 18:12:58 +0000 2013",
+            "id": 412284160904945664,
+            "id_str": "412284160904945664",
+            "text": "@jsl_demo_07 i shall become a billionare at age 21",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793570,
+              "id_str": "59793570",
+              "name": "I LOVE PIE :D",
+              "screen_name": "jsl_demo_04",
+              "location": "East oakland",
+              "description": "THE PIE KING!",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 11,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:19:18 +0000 2009",
+              "favourites_count": 2,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 594,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sun Dec 15 18:09:14 +0000 2013",
+            "id": 412283219631820800,
+            "id_str": "412283219631820800",
+            "text": "@jsl_demo_07 the world is mines",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793570,
+              "id_str": "59793570",
+              "name": "I LOVE PIE :D",
+              "screen_name": "jsl_demo_04",
+              "location": "East oakland",
+              "description": "THE PIE KING!",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 11,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:19:18 +0000 2009",
+              "favourites_count": 2,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 594,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sun Dec 15 18:08:56 +0000 2013",
+            "id": 412283145132580865,
+            "id_str": "412283145132580865",
+            "text": "@jsl_demo_07 helllo peasants",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793570,
+              "id_str": "59793570",
+              "name": "I LOVE PIE :D",
+              "screen_name": "jsl_demo_04",
+              "location": "East oakland",
+              "description": "THE PIE KING!",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 11,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:19:18 +0000 2009",
+              "favourites_count": 2,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 594,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "tl"
+          },
+          {
+            "created_at": "Sun Dec 15 17:57:31 +0000 2013",
+            "id": 412280273577836544,
+            "id_str": "412280273577836544",
+            "text": "@jsl_demo_07 hello",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793570,
+              "id_str": "59793570",
+              "name": "I LOVE PIE :D",
+              "screen_name": "jsl_demo_04",
+              "location": "East oakland",
+              "description": "THE PIE KING!",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 19,
+              "friends_count": 11,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:19:18 +0000 2009",
+              "favourites_count": 2,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 594,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000780138287/eaf6492d08b8d5e3e471aaf3b11567ae_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "id"
+          },
+          {
+            "created_at": "Sun Dec 15 17:57:02 +0000 2013",
+            "id": 412280150810583040,
+            "id_str": "412280150810583040",
+            "text": "@jsl_demo_07 Hello there",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59792784,
+              "id_str": "59792784",
+              "name": "JSL Demo 02",
+              "screen_name": "jsl_demo_02",
+              "location": "",
+              "description": "Dont display my bio on the projector or else",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 29,
+              "friends_count": 63,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:15:58 +0000 2009",
+              "favourites_count": 5,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 563,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_banner_url": "https://pbs.twimg.com/profile_banners/59792784/1385220941",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sun Dec 15 17:45:51 +0000 2013",
+            "id": 412277337233686528,
+            "id_str": "412277337233686528",
+            "text": "@jsl_demo_07 :D",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793765,
+              "id_str": "59793765",
+              "name": "Mr. Pretzel",
+              "screen_name": "jsl_demo_05",
+              "location": "",
+              "description": "",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 23,
+              "friends_count": 15,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:20:08 +0000 2009",
+              "favourites_count": 11,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 653,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779263205/a806fe595bd27fbc98ee58d0bc41e810_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779263205/a806fe595bd27fbc98ee58d0bc41e810_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "O_O",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "und"
+          },
+          {
+            "created_at": "Sun Dec 15 17:42:13 +0000 2013",
+            "id": 412276420459524097,
+            "id_str": "412276420459524097",
+            "text": "@jsl_demo_07 pretzels",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793765,
+              "id_str": "59793765",
+              "name": "Mr. Pretzel",
+              "screen_name": "jsl_demo_05",
+              "location": "",
+              "description": "",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 23,
+              "friends_count": 15,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:20:08 +0000 2009",
+              "favourites_count": 11,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 653,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779263205/a806fe595bd27fbc98ee58d0bc41e810_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779263205/a806fe595bd27fbc98ee58d0bc41e810_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "de"
+          },
+          {
+            "created_at": "Sun Dec 15 17:41:14 +0000 2013",
+            "id": 412276175747039232,
+            "id_str": "412276175747039232",
+            "text": "@jsl_demo_07 cats &gt;:)",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793765,
+              "id_str": "59793765",
+              "name": "Mr. Pretzel",
+              "screen_name": "jsl_demo_05",
+              "location": "",
+              "description": "",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 23,
+              "friends_count": 15,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:20:08 +0000 2009",
+              "favourites_count": 11,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 653,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779263205/a806fe595bd27fbc98ee58d0bc41e810_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779263205/a806fe595bd27fbc98ee58d0bc41e810_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "tl"
+          },
+          {
+            "created_at": "Sat Dec 14 21:18:29 +0000 2013",
+            "id": 411968459526774785,
+            "id_str": "411968459526774785",
+            "text": "@jsl_demo_07 jabrina?",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": 411968289686835201,
+            "in_reply_to_status_id_str": "411968289686835201",
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793123,
+              "id_str": "59793123",
+              "name": "MEEEEEP",
+              "screen_name": "jsl_demo_03",
+              "location": "",
+              "description": "",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 14,
+              "friends_count": 15,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:17:29 +0000 2009",
+              "favourites_count": 12,
+              "utc_offset": -28800,
+              "time_zone": "Pacific Time (US & Canada)",
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 385,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779247591/bae09db7ac2256c372873cd6d644261f_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779247591/bae09db7ac2256c372873cd6d644261f_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "id"
+          },
+          {
+            "created_at": "Sat Dec 14 21:16:33 +0000 2013",
+            "id": 411967974157733888,
+            "id_str": "411967974157733888",
+            "text": "@jsl_demo_07 wu?",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59793123,
+              "id_str": "59793123",
+              "name": "MEEEEEP",
+              "screen_name": "jsl_demo_03",
+              "location": "",
+              "description": "",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 14,
+              "friends_count": 15,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:17:29 +0000 2009",
+              "favourites_count": 12,
+              "utc_offset": -28800,
+              "time_zone": "Pacific Time (US & Canada)",
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 385,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779247591/bae09db7ac2256c372873cd6d644261f_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779247591/bae09db7ac2256c372873cd6d644261f_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "und"
+          },
+          {
+            "created_at": "Sat Dec 14 21:08:46 +0000 2013",
+            "id": 411966016638287873,
+            "id_str": "411966016638287873",
+            "text": "@jsl_demo_07 to walk, stand, or sit with the legs wide apart; stand or sit astride.",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": 411965838971772928,
+            "in_reply_to_status_id_str": "411965838971772928",
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59792784,
+              "id_str": "59792784",
+              "name": "JSL Demo 02",
+              "screen_name": "jsl_demo_02",
+              "location": "",
+              "description": "Dont display my bio on the projector or else",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 29,
+              "friends_count": 63,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:15:58 +0000 2009",
+              "favourites_count": 5,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 563,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_banner_url": "https://pbs.twimg.com/profile_banners/59792784/1385220941",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sat Dec 14 21:08:05 +0000 2013",
+            "id": 411965841253892096,
+            "id_str": "411965841253892096",
+            "text": "@jsl_demo_07 straddle: to place both legs around something, as you would when riding a horse. http://t.co/4eRMm3R8Kf",
+            "source": "<a href=\"http://www.urbandictionary.com\" rel=\"nofollow\">urbanbot</a>",
+            "truncated": false,
+            "in_reply_to_status_id": 411965838971772928,
+            "in_reply_to_status_id_str": "411965838971772928",
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 15518000,
+              "id_str": "15518000",
+              "name": "Urban Dictionary",
+              "screen_name": "urbandictionary",
+              "location": "",
+              "description": "Tweet 'what does bootylicious mean?' for a response from @urbandictionary. [[i am a robot]] http://t.co/vKQUCb5h",
+              "url": "http://t.co/YLlFYkuKQt",
+              "entities": {
+                "url": {
+                  "urls": [
+                    {
+                      "url": "http://t.co/YLlFYkuKQt",
+                      "expanded_url": "http://www.urbandictionary.com/",
+                      "display_url": "urbandictionary.com",
+                      "indices": [
+                        0,
+                        22
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "urls": [
+                    {
+                      "url": "http://t.co/vKQUCb5h",
+                      "expanded_url": "http://urbanup.com/feedback.php",
+                      "display_url": "urbanup.com/feedback.php",
+                      "indices": [
+                        92,
+                        112
+                      ]
+                    }
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 196828,
+              "friends_count": 13,
+              "listed_count": 2601,
+              "created_at": "Mon Jul 21 17:32:55 +0000 2008",
+              "favourites_count": 0,
+              "utc_offset": -28800,
+              "time_zone": "Pacific Time (US & Canada)",
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 2104785,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "4B4C4D",
+              "profile_background_image_url": "http://a0.twimg.com/profile_background_images/170254906/ud_twitter2.jpg",
+              "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/170254906/ud_twitter2.jpg",
+              "profile_background_tile": true,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/1164168434/ud_profile2_normal.jpg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1164168434/ud_profile2_normal.jpg",
+              "profile_link_color": "4E86C2",
+              "profile_sidebar_border_color": "CFCFCF",
+              "profile_sidebar_fill_color": "F0F0F0",
+              "profile_text_color": "4B4C4D",
+              "profile_use_background_image": true,
+              "default_profile": false,
+              "default_profile_image": false,
+              "following": false,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+                {
+                  "url": "http://t.co/4eRMm3R8Kf",
+                  "expanded_url": "http://straddle.urbanup.com/472573",
+                  "display_url": "straddle.urbanup.com/472573",
+                  "indices": [
+                    94,
+                    116
+                  ]
+                }
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sat Dec 14 21:05:39 +0000 2013",
+            "id": 411965229921091584,
+            "id_str": "411965229921091584",
+            "text": "@jsl_demo_07 why u lyin com sey it tu mi fac",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": 411964855319408640,
+            "in_reply_to_status_id_str": "411964855319408640",
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59792784,
+              "id_str": "59792784",
+              "name": "JSL Demo 02",
+              "screen_name": "jsl_demo_02",
+              "location": "",
+              "description": "Dont display my bio on the projector or else",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 29,
+              "friends_count": 63,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:15:58 +0000 2009",
+              "favourites_count": 5,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 563,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_banner_url": "https://pbs.twimg.com/profile_banners/59792784/1385220941",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sat Dec 14 19:36:47 +0000 2013",
+            "id": 411942865623724032,
+            "id_str": "411942865623724032",
+            "text": "@jsl_demo_00 @jsl_demo_01 @jsl_demo_02 @jsl_demo_03 @jsl_demo_04 @jsl_demo_05 @jsl_demo_06 @jsl_demo_07 @jsl_demo_08 @jsl_demo_09",
+            "source": "<a href=\"http://jumpstartlab.com/resources/ruby-jumpstart/jstwitter/\" rel=\"nofollow\">JumpstartLab</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "id": 59794794,
+              "id_str": "59794794",
+              "name": "Terminator",
+              "screen_name": "jsl_demo_10",
+              "location": "",
+              "description": "",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 11,
+              "friends_count": 14,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:24:44 +0000 2009",
+              "favourites_count": 3,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 431,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/412285292335218688/MYHyiGzK_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/412285292335218688/MYHyiGzK_normal.jpeg",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": false,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_01",
+                  "name": "Flaky",
+                  "id": 59792365,
+                  "id_str": "59792365",
+                  "indices": [
+                    13,
+                    25
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_02",
+                  "name": "JSL Demo 02",
+                  "id": 59792784,
+                  "id_str": "59792784",
+                  "indices": [
+                    26,
+                    38
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_03",
+                  "name": "MEEEEEP",
+                  "id": 59793123,
+                  "id_str": "59793123",
+                  "indices": [
+                    39,
+                    51
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_04",
+                  "name": "I LOVE PIE :D",
+                  "id": 59793570,
+                  "id_str": "59793570",
+                  "indices": [
+                    52,
+                    64
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_05",
+                  "name": "Mr. Pretzel",
+                  "id": 59793765,
+                  "id_str": "59793765",
+                  "indices": [
+                    65,
+                    77
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_06",
+                  "name": "Lumpy Space Princess",
+                  "id": 59794002,
+                  "id_str": "59794002",
+                  "indices": [
+                    78,
+                    90
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    91,
+                    103
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_08",
+                  "name": "JSL Demo 08",
+                  "id": 59794468,
+                  "id_str": "59794468",
+                  "indices": [
+                    104,
+                    116
+                  ]
+                },
+                {
+                  "screen_name": "jsl_demo_09",
+                  "name": "The Doctor  ",
+                  "id": 59794634,
+                  "id_str": "59794634",
+                  "indices": [
+                    117,
+                    129
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "und"
+          },
+          {
+            "created_at": "Sat Dec 14 19:29:34 +0000 2013",
+            "id": 411941051780190208,
+            "id_str": "411941051780190208",
+            "text": "@jsl_demo_07 but there are no doorknobs in other planets???",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": 411939996887568384,
+            "in_reply_to_status_id_str": "411939996887568384",
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59792784,
+              "id_str": "59792784",
+              "name": "JSL Demo 02",
+              "screen_name": "jsl_demo_02",
+              "location": "",
+              "description": "Dont display my bio on the projector or else",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 29,
+              "friends_count": 63,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:15:58 +0000 2009",
+              "favourites_count": 5,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 563,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_banner_url": "https://pbs.twimg.com/profile_banners/59792784/1385220941",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+          },
+          {
+            "created_at": "Sat Dec 14 19:20:13 +0000 2013",
+            "id": 411938696489730048,
+            "id_str": "411938696489730048",
+            "text": "@jsl_demo_07 no sabrina ur uglee",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": 411938584187240448,
+            "in_reply_to_status_id_str": "411938584187240448",
+            "in_reply_to_user_id": 59794266,
+            "in_reply_to_user_id_str": "59794266",
+            "in_reply_to_screen_name": "jsl_demo_07",
+            "user": {
+              "id": 59792784,
+              "id_str": "59792784",
+              "name": "JSL Demo 02",
+              "screen_name": "jsl_demo_02",
+              "location": "",
+              "description": "Dont display my bio on the projector or else",
+              "url": null,
+              "entities": {
+                "description": {
+                  "urls": [
+
+                  ]
+                }
+              },
+              "protected": false,
+              "followers_count": 29,
+              "friends_count": 63,
+              "listed_count": 0,
+              "created_at": "Fri Jul 24 14:15:58 +0000 2009",
+              "favourites_count": 5,
+              "utc_offset": null,
+              "time_zone": null,
+              "geo_enabled": false,
+              "verified": false,
+              "statuses_count": 563,
+              "lang": "en",
+              "contributors_enabled": false,
+              "is_translator": false,
+              "profile_background_color": "C0DEED",
+              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+              "profile_background_tile": false,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000779315404/c98ce1191809969ffa4c94e476947668_normal.jpeg",
+              "profile_banner_url": "https://pbs.twimg.com/profile_banners/59792784/1385220941",
+              "profile_link_color": "0084B4",
+              "profile_sidebar_border_color": "C0DEED",
+              "profile_sidebar_fill_color": "DDEEF6",
+              "profile_text_color": "333333",
+              "profile_use_background_image": true,
+              "default_profile": true,
+              "default_profile_image": false,
+              "following": true,
+              "follow_request_sent": false,
+              "notifications": false
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 0,
+            "favorite_count": 1,
+            "entities": {
+              "hashtags": [
+
+              ],
+              "symbols": [
+
+              ],
+              "urls": [
+
+              ],
+              "user_mentions": [
+                {
+                  "screen_name": "jsl_demo_07",
+                  "name": "jsl_demo_07",
+                  "id": 59794266,
+                  "id_str": "59794266",
+                  "indices": [
+                    0,
+                    12
+                  ]
+                }
+              ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "lang": "sl"
+          }
+        ]
+    http_version: 
+  recorded_at: Tue, 14 Jan 2014 02:22:48 GMT
+recorded_with: VCR 2.8.0

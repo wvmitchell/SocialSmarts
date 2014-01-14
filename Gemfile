@@ -18,12 +18,18 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'hashie'
   gem 'rspec-rails'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'capybara-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :test do  
+  gem 'vcr'
+  gem 'webmock'
 end
