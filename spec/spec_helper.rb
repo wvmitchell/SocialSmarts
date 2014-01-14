@@ -3,6 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'vcr'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -40,27 +41,14 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
-  c.treat_symbols_as_metadata_keys_with_true_values = true
+  config.treat_symbols_as_metadata_keys_with_true_values = true
 
-  c.around(:each, :vcr) do |example|
+  config.around(:each, :vcr) do |example|
     name = example.metadata[:full_description].split(/\s+/, 2).join("/").underscore.gsub(/[^\w\/]+/, "_")
     options = {}
     options[:record] = example.metadata[:record] if example.metadata[:record]
     VCR.use_cassette(name, options) { example.call }
   end
-
-  # Enable Omniauth Testing Mode
-  OmniAuth.config.test_mode = true
-
-  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
-    :provider => "twitter",
-    :uid      => "1337",
-    :info     => {
-                  "name" => "JonnieHallman",
-                  "nickname" => "jhallman",
-                  "email"=> "jon@test.com"
-    }
-    })
 end
 
 VCR.configure do |c|
@@ -99,4 +87,21 @@ VCR.configure do |c|
       end
     end
   end
+end
+
+OmniAuth.config.test_mode = true
+
+def login_user(user)
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+    :provider => "twitter",
+    :uid      => user.uid,
+    :info     => {
+                  "name" => user.name,
+                  "nickname" => user.nickname
+    },
+    :extra    => {
+                  "access_token" => Hashie::Mash.new(token: user.access_token,
+                                                     secret: user.access_secret)
+    }
+    })
 end
