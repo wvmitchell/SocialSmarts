@@ -39,7 +39,12 @@
       </div>
     </div>
     <div class="hidden" id="reply_dropdown">
-      <p>dropdown reply text field goes here. eventually.</p>
+      <%= form_tag('/posts') do %>
+        <p>
+          <%=text_field_tag'respond', nil, :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %>
+          <%= submit_tag 'Reply' %>
+        </p>
+      <% end %>
     </div>
 
   </div>
