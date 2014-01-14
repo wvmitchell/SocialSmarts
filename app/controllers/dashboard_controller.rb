@@ -5,12 +5,13 @@ class DashboardController < ApplicationController
     # @mentions = current_user.mentions
     if current_user
       Mention.add_tweets_for(current_user)
-      @mentions = Mention.get_latest_mentions_for(current_user)
+      @mentions = Mention.get_unarchived_mentions_for(current_user)
     end
   end
 
   def archive
-    Mention.send_to_archived
+    Mention.find(params[:id]).send_to_archived
+    redirect_to home_path
   end
 
 end

@@ -21,8 +21,12 @@ class Mention < ActiveRecord::Base
     end
   end
 
-  def self.get_latest_mentions_for(user)
-    self.where(user_id: user.id)
+  # def self.get_latest_mentions_for(user)
+  #   self.where(user_id: user.id)
+  # end
+
+  def self.get_unarchived_mentions_for(user)
+    self.where(user_id: user.id, archived: false)
   end
 
   def pretty_time
