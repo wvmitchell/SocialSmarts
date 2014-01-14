@@ -9,4 +9,8 @@ class DashboardController < ApplicationController
     end
   end
 
+  def archive
+    Mention.send_to_archived
+  end
+
 end

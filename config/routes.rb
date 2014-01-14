@@ -7,6 +7,7 @@ SocialSmarts::Application.routes.draw do
   get 'login' => 'sessions#index'
 
   match "/auth/:provider/callback" => "sessions#create", via: :get
+  match "/archive" => "dashboard#archive", via: :post
   match "/signout" => "sessions#destroy", :as => :signout, via: :get
 
 end
