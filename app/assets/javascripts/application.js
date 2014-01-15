@@ -26,9 +26,9 @@ $(document).ready(function(){
   $(".respond").on("click", function(){
 
     var smartbox = $(this).parents(".smartbox");
-    var reply_dropdown = smartbox.children("#reply_dropdown");
+    var reply_dropdown = smartbox.children(".reply_dropdown");
 
-    reply_dropdown.slideToggle(900);
+    reply_dropdown.slideToggle(900, 'linear');
 
     // reply_dropdown.toggleClass("hidden");
   })
