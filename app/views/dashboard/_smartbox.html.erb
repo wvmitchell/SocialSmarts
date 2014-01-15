@@ -25,7 +25,7 @@
         <p><%= mention.pretty_time %></p>
       </div>
         <div class="retweet">
-          <%= image_tag("ss_star.png") %>
+          <%= image_tag("ss_reply.png") %>
           <!-- <input type="button" name="Retweet" value="Ret" width="30" height="30"/> -->
         </div>
         <div class="starred">
@@ -33,13 +33,12 @@
           <!-- <input type="button" name="Flag" value="Flg" width="30" height="30"/> -->
         </div>
         <div class="respond" id="reply">
-          <%= image_tag("ss_reply.png") %>
+          <%= image_tag("ss_star.png") %>
           <!-- <input type="button" name="Respond" value="Res" width="30" height="30"/> -->
         </div>
         <div class="archive">
-          <%= image_tag("ss_archive.png") %>
+          <%= link_to image_tag("ss_archive.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
           <!-- <input type="button" name="Archive" value="Arc" width="30" height="30"/> -->
-          <%= button_to "Archive", {:action => "archive", :id => mention.id} %>
           <!-- <button><img src="images/add.gif" alt="Archive" width="30" height="30" /> Archive</button> -->
         </div>
       </div>
