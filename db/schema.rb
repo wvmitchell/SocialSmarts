@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115212454) do
+ActiveRecord::Schema.define(version: 20140115220116) do
 
   create_table "mentions", force: true do |t|
     t.string   "hash_id"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20140115212454) do
     t.float    "klout"
     t.string   "message"
     t.datetime "tweet_timestamp"
-    t.boolean  "flag"
     t.boolean  "should_respond"
     t.boolean  "responded"
     t.boolean  "archived",          default: false
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140115212454) do
     t.integer  "user_id"
     t.string   "profile_image_uri"
     t.integer  "tweet_id"
+    t.boolean  "flagged",           default: false
   end
 
   add_index "mentions", ["archived"], name: "index_mentions_on_archived"

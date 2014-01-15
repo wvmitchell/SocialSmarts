@@ -26,12 +26,21 @@ class Mention < ActiveRecord::Base
     self.where(user_id: user.id, archived: false)
   end
 
+  def self.get_unflagged_mentions_for(user)
+    self.where(user_id: user.id, flagged: false)
+  end
+
   def pretty_time
     time = Time.at(tweet_timestamp).to_formatted_s(:long_ordinal)
   end
 
   def send_to_archived
     self.archived = true
+    self.save
+  end
+
+  def flag
+    self.flagged = true
     self.save
   end
 end
