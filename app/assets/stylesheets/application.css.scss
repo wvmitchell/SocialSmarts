@@ -56,6 +56,12 @@ h1 {
   width: 858px; 
 }
 
+.header_logo {
+  display: block;
+  float: left;
+  padding-top: 7px;
+}
+
 body {
   background-image:url('ss_bg_pattern.jpg');
   background-attachment: fixed;
