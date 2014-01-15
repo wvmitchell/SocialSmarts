@@ -17,13 +17,10 @@ class Mention < ActiveRecord::Base
       m.klout = kf.get_score_for(tweet.user.username)
       m.hash_id = Digest::SHA1.hexdigest(m.username + m.message)
       m.tweet_timestamp = tweet.created_at
+      m.tweet_id = tweet.id
       m.save
     end
   end
-
-  # def self.get_latest_mentions_for(user)
-  #   self.where(user_id: user.id)
-  # end
 
   def self.get_unarchived_mentions_for(user)
     self.where(user_id: user.id, archived: false)

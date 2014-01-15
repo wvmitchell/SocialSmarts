@@ -15,4 +15,6 @@ class TweetFetcher
     client.mentions_timeline
   end
 
+  # client.retweet(tweets)
+
 end
