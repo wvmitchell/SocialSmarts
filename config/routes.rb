@@ -1,5 +1,6 @@
 SocialSmarts::Application.routes.draw do
 
+  # Dashboard
   root to: "dashboard#index"
   get 'home' => 'dashboard#index'
   get 'archived_page' => 'dashboard#archived_page'
@@ -9,6 +10,7 @@ SocialSmarts::Application.routes.draw do
   post "/retweet/:id" => "dashboard#retweet"
   post "/flag/:id" => "dashboard#flag"
 
+  # Sessions
   get 'login' => 'sessions#index'
   match "/auth/:provider/callback" => "sessions#create", via: :get
   match "/signout" => "sessions#destroy", :as => :signout, via: :get

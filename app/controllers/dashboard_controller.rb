@@ -33,4 +33,8 @@ class DashboardController < ApplicationController
     @mentions = Mention.where(flagged: true, user_id: current_user.id)
   end
 
+  def replied_to
+    @mentions = Mention.where(responded: true, user_id: current_user.id)
+  end
+
 end
