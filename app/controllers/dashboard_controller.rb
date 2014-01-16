@@ -25,4 +25,12 @@ class DashboardController < ApplicationController
     redirect_to home_path
   end
 
+  def archived_page
+    @mentions = Mention.where(archived: true, user_id: current_user.id)
+  end
+
+  def flagged_page
+    @mentions = Mention.where(flagged: true, user_id: current_user.id)
+  end
+
 end
