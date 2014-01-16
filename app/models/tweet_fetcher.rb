@@ -19,4 +19,8 @@ class TweetFetcher
     client.retweet(mention.tweet_id)
   end
 
+  def reply_to_mention(mention, message)
+    client.update("@#{mention.username} #{message}", :in_reply_to_status_id => mention.tweet_id)
+  end
+
 end

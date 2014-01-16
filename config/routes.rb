@@ -9,6 +9,7 @@ SocialSmarts::Application.routes.draw do
   post "/archive/:id" => "dashboard#archive"
   post "/retweet/:id" => "dashboard#retweet"
   post "/flag/:id" => "dashboard#flag"
+  post "/reply/:id" => "dashboard#reply"
 
   # Sessions
   get 'login' => 'sessions#index'
