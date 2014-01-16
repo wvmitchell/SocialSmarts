@@ -42,4 +42,9 @@ class Mention < ActiveRecord::Base
     self.flagged = true
     self.save
   end
+
+  def mark_replied
+    self.responded = true
+    self.save
+  end
 end

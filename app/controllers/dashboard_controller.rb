@@ -25,12 +25,25 @@ class DashboardController < ApplicationController
     redirect_to home_path
   end
 
+  def reply
+    mention = Mention.find(params[:id])
+    tf = TweetFetcher.new(current_user)
+    if tf.reply_to_mention(mention, params[:respond])
+      mention.mark_replied
+    end
+    redirect_to home_path
+  end
+
   def archived_page
     @mentions = Mention.where(archived: true, user_id: current_user.id)
   end
 
   def flagged_page
     @mentions = Mention.where(flagged: true, user_id: current_user.id)
+  end
+
+  def replied_to
+    @mentions = Mention.where(responded: true, user_id: current_user.id)
   end
 
 end
