@@ -6,7 +6,9 @@ SocialSmarts::Application.routes.draw do
 
   get 'login' => 'sessions#index'
 
-  get 'archive_page' => 'dashboard#archive_page'
+  get 'archived_page' => 'dashboard#archived_page'
+
+  get 'flagged_page' => 'dashboard#flagged_page'
 
   match "/auth/:provider/callback" => "sessions#create", via: :get
   match "/signout" => "sessions#destroy", :as => :signout, via: :get
