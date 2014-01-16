@@ -5,6 +5,7 @@ describe TweetFetcher do
   before(:each) do
     @user = FactoryGirl.build(:user, name: "jsl_demo_07")
     @fetcher = TweetFetcher.new(@user)
+    puts @fetcher.inspect
   end
 
   it "returns tweets mentioning user", :vcr do

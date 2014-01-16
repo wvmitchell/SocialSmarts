@@ -92,9 +92,9 @@ end
 OmniAuth.config.test_mode = true
 
 def login_user(user)
-  omniauth_hash = {
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
     :provider => "twitter",
-    :uid      => user.id,
+    :uid      =>  user.uid,
     :info     => {
                   "name" => user.name,
                   "nickname" => user.nickname
@@ -103,6 +103,5 @@ def login_user(user)
                   "access_token" => Hashie::Mash.new(token: user.access_token,
                                                      secret: user.access_secret)
     }
-  }
-  OmniAuth.config.addmock(:twitter, omniauth_hash)
+  })
 end

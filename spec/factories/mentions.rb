@@ -8,5 +8,6 @@ FactoryGirl.define do
     klout 10
     profile_image_uri "http://www.google.com"
     message "This is a Tweet"
+    tweet_id 1
   end
 end
