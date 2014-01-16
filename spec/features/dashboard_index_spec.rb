@@ -21,8 +21,13 @@ describe "dashboard index" do
   end
 
   it "archives mentions" do
+    expect(page).to have_content 'This is a Tweet'
     page.first(".archive a").click
     expect(page).to_not have_content 'This is a Tweet'
+    within('.sort_tab_names') do
+      click_on "Archive"
+    end
+    expect(page).to have_content 'This is a Tweet'
   end
 
   xit "retweets mentions" do
