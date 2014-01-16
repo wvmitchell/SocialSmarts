@@ -2,7 +2,7 @@ require 'digest'
 
 class Mention < ActiveRecord::Base
   belongs_to :user
-  validates_uniqueness_of :hash_id
+  validates_uniqueness_of :tweet_id
 
   def self.add_tweets_for(user)
     tf = TweetFetcher.new(user)
@@ -15,7 +15,6 @@ class Mention < ActiveRecord::Base
       m.username = tweet.user.username
       m.message = tweet.text
       m.klout = kf.get_score_for(tweet.user.username)
-      m.hash_id = Digest::SHA1.hexdigest(m.username + m.message)
       m.tweet_timestamp = tweet.created_at
       m.tweet_id = tweet.id
       m.save

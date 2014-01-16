@@ -21,4 +21,11 @@ class DashboardController < ApplicationController
     redirect_to home_path
   end
 
+  def flag
+    mention = Mention.find(params[:id])
+    tf = TweetFetcher.new(current_user)
+    tf.flag_mention(mention)
+    redirect_to home_path
+  end
+
 end

@@ -15,13 +15,6 @@ class TweetFetcher
     client.mentions_timeline
   end
 
-  # client.retweet(*tweets)
-  # Twitter::Tweet
-
-  # 1. Pass the mention to the function
-  # 2. Create the tweet object based on the mention.tweet_id
-  # 3. Retweet the tweet, using the client.retweet(tweet)
-
   def retweet_mention(mention)
     client.retweet(mention.tweet_id)
   end

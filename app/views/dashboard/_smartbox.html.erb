@@ -28,7 +28,7 @@
           <%= link_to image_tag("ss_reply.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
         </div>
         <div class="starred">
-          <%= image_tag("ss_flag.png") %>
+          <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, method: 'post' %>
         </div>
         <div class="respond" id="reply">
           <%= image_tag("ss_star.png") %>
