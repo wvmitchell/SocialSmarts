@@ -1,25 +1,37 @@
-<h1>SocialSmart</h1>
+<div id="login_box">
+  <div class="logo_and_name">
+    <%= image_tag("ss_logo_icon.png") %>
+    <h1>Social Smarts</h1>
+  </div>
 
-<% if current_user %>
-  Welcome <%= current_user.name %>!
-  <%= button_to "Sign Out", signout_path, method: "get" %>
-<% else %>
-  <%= button_to "Sign in with Twitter", "/auth/twitter", method: "get" %>
-<% end %>
+  <div class="login_with_twitter">
+    <% if current_user %>
+      Welcome <%= current_user.name %>!
+      <%= button_to "Sign Out", signout_path, method: "get" %>
+    <% else %>
+      <%= button_to "Sign in with Twitter", "/auth/twitter", method: "get" %>
+    <% end %>
+  </div>
+</div>
 
-<div id="testimonials">
-  <h2>Testimonials</h2>
-  <blockquote>
-    "Social Smart makes my job so much easier!"
-  </blockquote>
 
-  <h2>About Us</h2>
-  <p>* Displays your full Twitter feed, especially your mentions</p>
-  <p>* Augments tweets with the user’s Klout score</p>
-  <p>* Plots recent activity on a Google Map</p>
-  <p>* Helps you track which tweets need follow up and which are resolved</p>
-  <p>* Allows you to schedule tweets for future posting</p>
-  <p>* Finds your most influential followers</p>
-  <p>* Supports "interaction goals", for organizations that seek to post at least X tweets every Y time period</p>
-  <p>* Your customers are talking. SocialSmarts helps you listen.</p>
+<div id="product_info">
+  <div class="about_us">
+    <h2>About Us</h2>
+    <p>• Displays your full Twitter feed, especially your mentions</p>
+    <p>• Augments tweets with the user’s Klout score</p>
+    <p>• Plots recent activity on a Google Map</p>
+    <p>• Helps you track which tweets need follow up and which are resolved</p>
+    <p>• Allows you to schedule tweets for future posting</p>
+    <p>• Finds your most influential followers</p>
+    <p>• Supports "interaction goals", for organizations that seek to post at least X tweets every Y time period</p>
+    <p><strong>Your customers are talking. Social Smarts helps you listen.</strong></p>
+  </div>
+
+  <div class="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>
+      "Social Smarts makes my job <strong>so much</strong> easier!"
+    </blockquote>
+  </div>
 </div>
