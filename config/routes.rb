@@ -15,5 +15,7 @@ SocialSmarts::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create", via: :get
   match "/signout" => "sessions#destroy", :as => :signout, via: :get
   post "/archive/:id" => "dashboard#archive"
+  post "/retweet/:id" => "dashboard#retweet"
+  post "/flag/:id" => "dashboard#flag"
 
 end

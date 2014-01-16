@@ -17,4 +17,14 @@ require 'spec_helper'
       mentions = Mention.get_unarchived_mentions_for(user)
       mentions.should_not include(mention)
     end
+
+    it "can be flagged" do
+      user = FactoryGirl.create(:user)
+      mention = FactoryGirl.create(:mention, user_id: user.id)
+      mentions = Mention.get_unflagged_mentions_for(user)
+      mentions.should include(mention)
+      mention.flag
+      mentions = Mention.get_unflagged_mentions_for(user)
+      mentions.should_not include(mention)
+    end
   end

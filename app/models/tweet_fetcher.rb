@@ -15,4 +15,8 @@ class TweetFetcher
     client.mentions_timeline
   end
 
+  def retweet_mention(mention)
+    client.retweet(mention.tweet_id)
+  end
+
 end

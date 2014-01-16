@@ -11,15 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113234126) do
+ActiveRecord::Schema.define(version: 20140115233926) do
 
   create_table "mentions", force: true do |t|
-    t.string   "hash_id"
     t.string   "username"
     t.float    "klout"
     t.string   "message"
     t.datetime "tweet_timestamp"
-    t.boolean  "flag"
     t.boolean  "should_respond"
     t.boolean  "responded"
     t.boolean  "archived",          default: false
@@ -28,10 +26,11 @@ ActiveRecord::Schema.define(version: 20140113234126) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "profile_image_uri"
+    t.integer  "tweet_id"
+    t.boolean  "flagged",           default: false
   end
 
   add_index "mentions", ["archived"], name: "index_mentions_on_archived"
-  add_index "mentions", ["hash_id"], name: "index_mentions_on_hash_id"
 
   create_table "users", force: true do |t|
     t.string   "provider"
