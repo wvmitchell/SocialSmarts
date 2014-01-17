@@ -1,6 +1,11 @@
 SocialSmarts::Application.routes.draw do
 
-  # Dashboard
+  namespace :api do #, :path => "", :constraints => {:subdomain => "api"}, :defaults => {:format => :json} do
+    namespace :v1 do
+      resources :mentions, only:[:index, :show]
+    end
+  end
+
   root to: "dashboard#index"
   get 'home' => 'dashboard#index'
   get 'archived_page' => 'dashboard#archived_page'
