@@ -29,10 +29,6 @@ class Mention < ActiveRecord::Base
     self.where(user_id: user.id, flagged: false)
   end
 
-  def pretty_time
-    time = Time.at(tweet_timestamp).to_formatted_s(:long_ordinal)
-  end
-
   def send_to_archived
     self.archived = true
     self.save

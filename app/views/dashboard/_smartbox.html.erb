@@ -22,7 +22,7 @@
 
     <div class="sort_options">
       <div class="timestamp">
-        <p><%= mention.pretty_time %></p>
+        <p><%= pretty_time(mention) %></p>
       </div>
         <div class="retweet">
           <%= link_to image_tag("ss_retweet.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
