@@ -1,14 +1,17 @@
 <div id="header">
   <div class="header_content">
-  <div class="header_logo">
-    <%= image_tag("ss_logo.png") %>
-  </div>
-    <%= image_tag current_user.image %>
-    <%= current_user.nickname %>
-    <%= current_user.location %>
-
-    <% if current_user %>
-      <%= link_to "Signout", signout_path %>
-    <% end %>
+    <div class="header_logo">
+      <%= image_tag("ss_logo.png") %>
+    </div>
+    <div id="current_user_info">
+      User Login: <%= current_user.nickname %><br>
+      Location: <%=  current_user.location %><br>
+      <% if current_user %>
+        <%= button_to "Signout", signout_path %><br>
+      <% end %>
+    </div>
+    <div id="current_user_image">
+      <%= image_tag current_user.image %>
+    </div>
   </div>
 </div>

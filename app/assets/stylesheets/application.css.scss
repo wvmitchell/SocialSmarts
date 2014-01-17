@@ -27,8 +27,8 @@
   Note: IE6 works fine without this fix.
 */
 
-$font-family-sans-serif: 'Merriweather Sans', sans-serif; 
-$font-family-base: 'Merriweather Sans', sans-serif; 
+$font-family-sans-serif: 'Merriweather Sans', sans-serif;
+$font-family-base: 'Merriweather Sans', sans-serif;
 
 h1 {
   font-size: 1.3em;
@@ -38,8 +38,8 @@ h1 {
   background-position: top;
   background-color: #2C2E2E;
   height: 65px;
-  left: 0; 
-  top: 0; 
+  left: 0;
+  top: 0;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -53,13 +53,19 @@ h1 {
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: right;
-  width: 858px; 
+  width: 858px;
 }
 
 .header_logo {
   display: block;
   float: left;
   padding-top: 7px;
+  padding-left: 28px;
+}
+
+#current_user_info {
+  float: right;
+  padding-right: 10px;
 }
 
 body {
