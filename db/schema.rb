@@ -11,15 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115233926) do
+ActiveRecord::Schema.define(version: 20140116212241) do
 
   create_table "mentions", force: true do |t|
     t.string   "username"
     t.float    "klout"
     t.string   "message"
     t.datetime "tweet_timestamp"
-    t.boolean  "should_respond"
-    t.boolean  "responded"
+    t.boolean  "responded",         default: false
     t.boolean  "archived",          default: false
     t.boolean  "favorited"
     t.datetime "created_at"

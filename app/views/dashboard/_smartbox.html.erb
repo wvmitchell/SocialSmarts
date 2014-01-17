@@ -40,8 +40,8 @@
     </div>
     <div class="reply_dropdown">
       <div class="reply_form">
-        <%= form_tag('/posts') do %>
-          <p><%=text_area_tag'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
+        <%= form_tag("/reply/#{mention.id}") do %>
+          <p><%=text_area_tag 'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
           <p><%= submit_tag 'Reply' %></p>
         <% end %>
       </div>
