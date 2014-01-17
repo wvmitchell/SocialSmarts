@@ -2,7 +2,7 @@ SocialSmarts::Application.routes.draw do
 
   namespace :api do #, :path => "", :constraints => {:subdomain => "api"}, :defaults => {:format => :json} do
     namespace :v1 do
-      resources :mentions, only:[:index, :show]
+      resources :mentions, only:[:index]
     end
   end
 

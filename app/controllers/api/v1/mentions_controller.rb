@@ -7,4 +7,8 @@ class API::V1::MentionsController < ApplicationController
   def send_to_archived
     respond_with Mention.archived = true
   end
+
+  def archive_index
+    
+  end
 end
