@@ -7,7 +7,7 @@
       User Login: <%= current_user.nickname %><br>
       Location: <%=  current_user.location %><br>
       <% if current_user %>
-        <%= link_to "Signout", signout_path, {:style=>'color:#FFFFFF;', :class => "signout_class"}  %><br>
+        <%= button_to "Signout", signout_path %><br>
       <% end %>
     </div>
     <div id="current_user_image">
