@@ -42,6 +42,12 @@
 
 }
 
+.sort_tab_names li a {
+  text-decoration: none;
+}
+
+
+
 .sort_tab_names li:hover {
   background-color: #8BD5EB;
 
@@ -148,7 +154,7 @@
   margin: 2px;
 }
 
-.retweet, .starred, .respond, .archive {
+.retweet, .flag, .respond, .archive {
   float: left;
   height: 30px;
   width: 10px;

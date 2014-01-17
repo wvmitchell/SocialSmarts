@@ -1,10 +1,10 @@
 <div id="sort_tab_bar">
   <div class="sort_tab_names">
    <ul>
-      <li>Inbox</li>
-      <li>Reply To</li>
-      <li>Flagged</li>
-      <li>Archive</li>
+      <li><%= link_to 'Inbox', home_path %></li>
+      <li><%= link_to 'Replied To', replied_to_path %></li>
+      <li><%= link_to 'Flagged', flagged_page_path %></li>
+      <li><%= link_to 'Archived', archived_page_path %></li>
     </ul>
   </div>
 </div>

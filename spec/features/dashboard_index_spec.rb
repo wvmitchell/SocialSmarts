@@ -2,30 +2,45 @@ require 'spec_helper'
 
 describe "dashboard index" do
 
-  it "views mentions" do
-    user = FactoryGirl.create(:user)
-    FactoryGirl.create(:mention, user: user)
+  before do
+    user = FactoryGirl.build(:user)
+    FactoryGirl.create(:mention)
     Mention.stub(:add_tweets_for)
     login_user(user)
     visit login_path
     click_on "Sign in with Twitter"
-    expect(page).to have_content 'Inbox'
   end
 
-  xit "archives mentions" do
-    FactoryGirl.create(:mention)
-    visit login_path
-    click_on "Sign in with Twitter"
+  it "views mentions" do
     expect(page).to have_content 'This is a Tweet'
-    click_on "Archive"
-    expect(page).to_not have_content 'This is a Tweet'
   end
 
-  it "retweets mentions" do 
+  it "flags mentions" do
+    expect(page).to have_content 'This is a Tweet'
+    page.first(".flag a").click
+    (Mention.first.flagged).should eq(true)
+    within('.sort_tab_names') do
+      click_on "Flagged"
+    end
+    expect(page).to have_content 'This is a Tweet'
+  end
+
+  it "archives mentions" do
+    expect(page).to have_content 'This is a Tweet'
+    page.first(".archive a").click
+    expect(page).to_not have_content 'This is a Tweet'
+    within('.sort_tab_names') do
+      click_on "Archived"
+    end
+    expect(page).to have_content 'This is a Tweet'
+  end
+
+  xit "retweets mentions" do
     FactoryGirl.create(:mention)
     FactoryGirl.create(:mention)
 
     visit login_path
     click_on "Sign in with Twitter"
   end
+
 end
