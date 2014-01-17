@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'twitter', '~> 5.0'
 gem 'faraday'
+gem 'capistrano'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
