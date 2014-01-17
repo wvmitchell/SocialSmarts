@@ -94,12 +94,11 @@
 
 .klout {
   float: left;
-  margin-top: -35px;
+  margin-top: -12px;
   height: 40px;
   width: 140px;
-  font-size: 3.75em;
-  font-align: center;
-  text-align: center;
+  font-size: 1em;
+  text-align: left;
 }
 
 
@@ -152,6 +151,7 @@
 .timestamp {
   text-align: center;
   margin: 2px;
+  margin-top: -28px;
 }
 
 .retweet, .flag, .respond, .archive {
