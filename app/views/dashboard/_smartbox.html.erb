@@ -4,10 +4,12 @@
 
     <div class="klout">
       <% if mention.klout.round > 50 %>
-        <p id="klout_score"><%= mention.klout.round %></p>
+        <p id="klout_score">Klout Score: <%= mention.klout.round %></p>
       <% else %>
-        <p><%= mention.klout.round %></p>
+        <p>Klout Score: <%= mention.klout.round %></p>
       <% end %>
+      Followers:<p>
+      Following:
     </div>
 
     <div class="tweeter_image">
