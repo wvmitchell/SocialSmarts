@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
     redirect_to login_path unless current_user
     if current_user
       Mention.add_tweets_for(current_user)
-      @mentions = Mention.get_unarchived_mentions_for(current_user)
+      @mentions = Mention.get_unarchived_mentions_for(current_user) && Mention.get_unflagged_mentions_for(current_user)
     end
   end
 
