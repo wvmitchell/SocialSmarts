@@ -24,22 +24,29 @@
       <div class="timestamp">
         <p><%= pretty_time(mention) %></p>
       </div>
+      <div class="action_icons">
         <div class="retweet">
           <%= link_to image_tag("ss_retweet.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
         </div>
+
         <div class="flag">
-          <% if mention.flagged = true %>
-          <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, method: 'post' %>
-          <% else %>
+          <% if mention.flagged == true %>
           <%= link_to image_tag("ss_flag_on-click.png"), {:action => "flag", :id => mention.id}, method: 'post' %>
+          <% else %>
+          <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, method: 'post' %>
           <% end %>
         </div>
+
         <div class="respond" id="reply">
           <%= image_tag("ss_reply.png") %>
         </div>
+
         <div class="archive">
+          
           <%= link_to image_tag("ss_archive.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
         </div>
+
+      </div>
       </div>
     </div>
     <div class="reply_dropdown">
