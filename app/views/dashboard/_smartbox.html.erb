@@ -8,8 +8,8 @@
       <% else %>
         <p>Klout Score: <%= mention.klout.round %></p>
       <% end %>
-      Followers:<p>
-      Following:
+      Followers: <%= mention.followers_count %> </p>
+      Following: <%= mention.friends_count %>
     </div>
 
     <div class="tweeter_image">
