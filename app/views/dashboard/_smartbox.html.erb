@@ -40,7 +40,11 @@
         </div>
 
         <div class="respond" id="reply">
-          <%= image_tag("ss_reply.png") %>
+          <% if mention.responded == true %>
+            <%= image_tag("ss_reply_on-click.png") %>
+          <% else %>
+            <%= image_tag("ss_reply.png") %>
+          <% end %>
         </div>
 
         <div class="archive">
