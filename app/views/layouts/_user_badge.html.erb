@@ -7,7 +7,7 @@
       User Login: <%= current_user.nickname %><br>
       Location: <%=  current_user.location %><br>
       <% if current_user %>
-        <%= button_to "Signout", signout_path %><br>
+        <%= button_to "Signout", signout_path, method: :get %><br>
       <% end %>
     </div>
     <div id="current_user_image">

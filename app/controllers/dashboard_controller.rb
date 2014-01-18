@@ -4,13 +4,13 @@ class DashboardController < ApplicationController
     redirect_to login_path unless current_user
     if current_user
       Mention.add_tweets_for(current_user)
-      @mentions = Mention.get_unarchived_mentions_for(current_user)
+      @mentions = Mention.get_mentions_for_inbox(current_user)
     end
   end
 
   def archive
     Mention.find(params[:id]).send_to_archived
-    redirect_to home_path
+    redirect_to :back
   end
 
   def retweet
@@ -22,7 +22,7 @@ class DashboardController < ApplicationController
 
   def flag
     Mention.find(params[:id]).flag
-    redirect_to home_path
+    redirect_to :back
   end
 
   def reply
@@ -39,11 +39,11 @@ class DashboardController < ApplicationController
   end
 
   def flagged_page
-    @mentions = Mention.where(flagged: true, user_id: current_user.id)
+    @mentions = Mention.where(flagged: true, archived: false, user_id: current_user.id)
   end
 
   def replied_to
-    @mentions = Mention.where(responded: true, user_id: current_user.id)
+    @mentions = Mention.where(responded: true, archived: false, user_id: current_user.id)
   end
 
 end

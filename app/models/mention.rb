@@ -29,6 +29,10 @@ class Mention < ActiveRecord::Base
     self.where(user_id: user.id, flagged: false)
   end
 
+  def self.get_mentions_for_inbox(user)
+    self.where(user_id: user.id, flagged: false, archived: false)
+  end
+
   def send_to_archived
     self.archived = true
     self.save
