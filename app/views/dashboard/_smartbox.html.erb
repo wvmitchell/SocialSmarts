@@ -28,7 +28,11 @@
       </div>
       <div class="action_icons">
         <div class="retweet">
+          <% if mention.retweeted == true %>
+          <%= link_to image_tag("ss_retweet_on-click.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
+          <% else %>
           <%= link_to image_tag("ss_retweet.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
+          <% end %>
         </div>
 
         <div class="flag">

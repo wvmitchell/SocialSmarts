@@ -17,6 +17,8 @@ class TweetFetcher
 
   def retweet_mention(mention)
     client.retweet(mention.tweet_id)
+    mention.retweeted = true
+    mention.save
   end
 
   def reply_to_mention(mention, message)

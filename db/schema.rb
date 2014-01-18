@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140116212241) do
+ActiveRecord::Schema.define(version: 20140118211808) do
 
   create_table "mentions", force: true do |t|
     t.string   "username"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140116212241) do
     t.string   "profile_image_uri"
     t.integer  "tweet_id"
     t.boolean  "flagged",           default: false
+    t.boolean  "retweeted",         default: false
   end
 
   add_index "mentions", ["archived"], name: "index_mentions_on_archived"

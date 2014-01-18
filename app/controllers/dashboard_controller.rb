@@ -17,7 +17,7 @@ class DashboardController < ApplicationController
     mention = Mention.find(params[:id])
     tf = TweetFetcher.new(current_user)
     tf.retweet_mention(mention)
-    redirect_to home_path
+    redirect_to :back
   end
 
   def flag
@@ -31,7 +31,7 @@ class DashboardController < ApplicationController
     if tf.reply_to_mention(mention, params[:respond])
       mention.mark_replied
     end
-    redirect_to home_path
+    redirect_to :back
   end
 
   def archived_page
