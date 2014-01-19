@@ -1,28 +1,5 @@
-== README
+== Social Smarts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Have you ever wished that you had a better way to manage your social media presence?
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Social Smarts makes it possible for you to mark the most important tweets to you, and take action on them.
