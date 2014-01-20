@@ -17,6 +17,8 @@ class Mention < ActiveRecord::Base
       m.klout = kf.get_score_for(tweet.user.username)
       m.tweet_timestamp = tweet.created_at
       m.tweet_id = tweet.id
+      m.followers_count = tweet.user.followers_count
+      m.friends_count = tweet.user.friends_count
       m.save
     end
   end
