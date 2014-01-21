@@ -2,6 +2,7 @@ class KloutFetcher
 
   BASE_URL = "http://api.klout.com/v2/"
 
+
   def get_score_information_for(user)
     response = Faraday.get(BASE_URL + "identity.json/twitter?screenName=#{user}&key=#{ENV['KLOUT_KEY']}")
     unless response.body == ""
@@ -12,9 +13,8 @@ class KloutFetcher
   end
 
   def get_score_for(user)
-    #info = get_score_information_for(user)
-    #info["score"] if info
-    rand(100)
+    info = get_score_information_for(user)
+    info["score"] if info
   end
 
 end

@@ -9,15 +9,10 @@
           <%= image_tag mention.profile_image_uri, :class => "user_image" %>
       </div>
 
-      <div class="klout">
-        <% if mention.klout.round > 50 %>
-          <p id="klout_score"><strong><%= mention.klout.round %></strong></p>
-        <% else %>
-          <p><strong><%= mention.klout.round %></strong></p>
-        <% end %>
-        <p><%= mention.followers_count %></p>
-        <p><%= mention.friends_count %></p>
-      </div>
+    <div class="klout">
+      <p><strong><%= display_klout_score(mention) %></strong></p>
+      <p><%=mention.followers_count %> </p>
+      <p><%= mention.friends_count %></p>
     </div>
 
     <div class="tweet_text">
@@ -67,7 +62,7 @@
 
   </div>
   <div class="reply_dropdown">
-    <div class="reply_form"> 
+    <div class="reply_form">
       <%= form_tag("/reply/#{mention.id}") do %>
         <p><%=text_area_tag 'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
          <p><%= submit_tag 'Reply' %></p>

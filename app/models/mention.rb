@@ -6,7 +6,6 @@ class Mention < ActiveRecord::Base
 
   def self.add_tweets_for(user)
     tf = TweetFetcher.new(user)
-    kf = KloutFetcher.new
     tweets = tf.find_tweets_mentioning
     tweets.each do |tweet|
       m = Mention.new
@@ -14,11 +13,12 @@ class Mention < ActiveRecord::Base
       m.profile_image_uri = tweet.user.profile_image_uri.to_s
       m.username = tweet.user.username
       m.message = tweet.text
-      m.klout = kf.get_score_for(tweet.user.username)
+      m.klout = nil
       m.tweet_timestamp = tweet.created_at
       m.tweet_id = tweet.id
       m.followers_count = tweet.user.followers_count
       m.friends_count = tweet.user.friends_count
+      m.retweeted = tweet.retweeted
       m.save
     end
   end

@@ -3,8 +3,9 @@ class DashboardController < ApplicationController
   def index
     redirect_to login_path unless current_user
     if current_user
-      Mention.add_tweets_for(current_user)
+      Resque.enqueue(MentionFetcherWorker, current_user.id)
       @mentions = Mention.get_mentions_for_inbox(current_user)
+      Resque.enqueue(KloutFetchWorker, current_user.id)
     end
   end
 
