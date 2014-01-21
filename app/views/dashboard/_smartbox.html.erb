@@ -47,7 +47,7 @@
           <% if mention.responded == true %>
             <%= image_tag("ss_reply_on-click.png") %>
           <% else %>
-            <%= image_tag("ss_reply.png") %>
+            <%= link_to image_tag("ss_reply.png"), "#", {:class => 'respond_link'} %>
           <% end %>
         </div>
 
@@ -62,14 +62,14 @@
       </div>
       </div>
     </div>
-    <div class="reply_dropdown">
-      <div class="reply_form">
-        <%= form_tag("/reply/#{mention.id}") do %>
-          <p><%=text_area_tag 'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
-          <p><%= submit_tag 'Reply' %></p>
-        <% end %>
-      </div>
-    </div>
 
+  </div>
+  <div class="reply_dropdown">
+    <div class="reply_form"> 
+      <%= form_tag("/reply/#{mention.id}") do %>
+        <p><%=text_area_tag 'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
+         <p><%= submit_tag 'Reply' %></p>
+      <% end %>
+    </div>
   </div>
 <% end %>
