@@ -4,9 +4,9 @@
 
     <div class="klout">
       <% if mention.klout.round > 50 %>
-        <p id="klout_score">Klout Score: <%= mention.klout.round %></p>
+        <p id="klout_score"><strong>Klout Score: <%= mention.klout.round %></strong></p>
       <% else %>
-        <p>Klout Score: <%= mention.klout.round %></p>
+        <p><strong>Klout Score: <%= mention.klout.round %></strong></p>
       <% end %>
       Followers: <%= mention.followers_count %> </p>
       Following: <%= mention.friends_count %>
