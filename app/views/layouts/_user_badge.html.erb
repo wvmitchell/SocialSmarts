@@ -3,15 +3,15 @@
     <div class="header_logo">
       <%= image_tag("ss_logo.png") %>
     </div>
+      <div id="current_user_image">
+        <%= image_tag current_user.image %>
+      </div>
     <div id="current_user_info">
       User Login: <%= current_user.nickname %><br>
       Location: <%=  current_user.location %><br>
       <% if current_user %>
         <%= button_to "Signout", signout_path, method: :get %><br>
       <% end %>
-    </div>
-    <div id="current_user_image">
-      <%= image_tag current_user.image %>
     </div>
   </div>
 </div>

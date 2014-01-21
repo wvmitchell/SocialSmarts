@@ -12,6 +12,7 @@ class KloutFetcher
   end
 
   def get_score_for(user)
+    Resque.enqueue
     #info = get_score_information_for(user)
     #info["score"] if info
     rand(100)
