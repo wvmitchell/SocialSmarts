@@ -4,7 +4,7 @@ class API::V1::MentionsController < ApplicationController
     respond_with Mention.limit(10).order("created_at DESC")
   end
 
-  def send_to_archived
-    respond_with Mention.archived = true
+  def show
+    respond_with Mention.find(params[:id])
   end
 end
