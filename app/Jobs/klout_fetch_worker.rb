@@ -8,7 +8,7 @@ class KloutFetchWorker
     mentions.each do |m|
       m.klout = kf.get_score_for(m.username)
       m.save
-      sleep(2)
+      sleep(1)
     end
   end
 
