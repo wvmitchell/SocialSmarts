@@ -1,7 +1,7 @@
 module DashboardHelper
 
-  def display_klout_score(klout_fetcher, user)
-    score = klout_fetcher.get_score_for(user.username)
+  def display_klout_score(mention)
+    score = mention.klout
     score ? score.round : 'n/a'
   end
 

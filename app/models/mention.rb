@@ -18,6 +18,7 @@ class Mention < ActiveRecord::Base
       m.tweet_id = tweet.id
       m.followers_count = tweet.user.followers_count
       m.friends_count = tweet.user.friends_count
+      m.retweeted = tweet.retweeted
       m.save
     end
   end

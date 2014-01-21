@@ -3,11 +3,7 @@
     <div class="smartbox-inset">
 
     <div class="klout">
-      <% if mention.klout > 50 %>
-        <p id="klout_score"><strong>Klout Score: <%= mention.klout %></strong></p>
-      <% else %>
-        <p><strong>Klout Score: <%= mention.klout %></strong></p>
-      <% end %>
+      <p><strong>Klout Score: <%= display_klout_score(mention) %></strong></p>
       Followers: <%= mention.followers_count %> </p>
       Following: <%= mention.friends_count %>
     </div>
