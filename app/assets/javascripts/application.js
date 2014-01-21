@@ -16,20 +16,23 @@
 //= require_tree .
 
 $(function changeColor() {
-  $(".klout").click(function(){
-    $("div.klout").addClass('green')
+  $(".klout").click(function(e){
+    $("div.klout").addClass('green');
+    e.prevent_default();
   });
 })
 
 
-$(document).ready(function(){
-  $(".respond").on("click", function(){
+$(function(){
+  $(".respond_link").on("click", function(e){
 
     var smartbox = $(this).parents(".smartbox");
-    var reply_dropdown = smartbox.children(".reply_dropdown");
+    var reply_dropdown = smartbox.next(".reply_dropdown");
 
-    reply_dropdown.slideToggle(900, 'linear');
+    reply_dropdown.slideToggle('slow');
 
-    // reply_dropdown.toggleClass("hidden");
+    console.log(reply_dropdown);
+
+    e.preventDefault();
   })
 })
