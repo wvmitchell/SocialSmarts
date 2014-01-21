@@ -29,6 +29,7 @@ group :development, :test do
   gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano-rails'
 end
 
 group :test do  

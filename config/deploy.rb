@@ -1,21 +1,16 @@
-# config valid only for Capistrano 3.1
-lock '3.1.0'
-
-require "bundler/capistrano"
-
 server "192.241.152.77", :web, :app, :db, primary: true
 
 set :application, "SocialSmarts"
 set :user, "root"
 set :deploy_to, "/home/#{user}/deploy/#{application}"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:wvmitchell/#{application}.git"
-set :branch, "master"
+set :repo_url, "git@github.com:wvmitchell/#{application}.git"
+set :branch, ENV["new_deployment_setup"] || "master"
 
-default_run_options[:pty] = true
+# default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
