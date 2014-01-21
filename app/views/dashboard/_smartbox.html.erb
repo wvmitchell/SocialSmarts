@@ -2,17 +2,18 @@
   <div class="smartbox clearflix">
     <!-- <div class="smartbox-inset"> -->
 
-    <div class="tweeter_details">
-      <div class="tweeter_image">
-        <p><%= "@" + mention.username %></p>
-        <!-- <circle cx="284" cy="213" r="213" /> -->
-          <%= image_tag mention.profile_image_uri, :class => "user_image" %>
-      </div>
+      <div class="tweeter_details">
+        <div class="tweeter_image">
+          <p><%= "@" + mention.username %></p>
+          <!-- <circle cx="284" cy="213" r="213" /> -->
+            <%= image_tag mention.profile_image_uri, :class => "user_image" %>
+        </div>
 
-    <div class="klout">
-      <p><strong><%= display_klout_score(mention) %></strong></p>
-      <p><%=mention.followers_count %> </p>
-      <p><%= mention.friends_count %></p>
+        <div class="klout">
+          <p><strong><%= display_klout_score(mention) %></strong></p>
+          <p><%=mention.followers_count %> </p>
+          <p><%= mention.friends_count %></p>
+        </div>
     </div>
 
     <div class="tweet_text">
