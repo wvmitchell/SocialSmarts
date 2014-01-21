@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'twitter', '~> 5.0'
 gem 'faraday'
 gem 'capistrano'
-gem 'resque'
+gem 'resque', :require => 'resque/server'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

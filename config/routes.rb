@@ -1,5 +1,8 @@
 SocialSmarts::Application.routes.draw do
 
+  resources :klout_fetch
+  mount Resque::Server, :at => "/resque"
+
   namespace :api do #, :path => "", :constraints => {:subdomain => "api"}, :defaults => {:format => :json} do
     namespace :v1 do
       resources :mentions, only:[:index, :show]

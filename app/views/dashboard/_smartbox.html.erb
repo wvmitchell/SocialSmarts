@@ -3,10 +3,10 @@
     <div class="smartbox-inset">
 
     <div class="klout">
-      <% if mention.klout.round > 50 %>
-        <p id="klout_score"><strong>Klout Score: <%= mention.klout.round %></strong></p>
+      <% if mention.klout > 50 %>
+        <p id="klout_score"><strong>Klout Score: <%= mention.klout %></strong></p>
       <% else %>
-        <p><strong>Klout Score: <%= mention.klout.round %></strong></p>
+        <p><strong>Klout Score: <%= mention.klout %></strong></p>
       <% end %>
       Followers: <%= mention.followers_count %> </p>
       Following: <%= mention.friends_count %>
@@ -65,7 +65,7 @@
 
   </div>
   <div class="reply_dropdown">
-    <div class="reply_form"> 
+    <div class="reply_form">
       <%= form_tag("/reply/#{mention.id}") do %>
         <p><%=text_area_tag 'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
          <p><%= submit_tag 'Reply' %></p>
