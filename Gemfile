@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'twitter', '~> 5.0'
 gem 'faraday'
 gem 'capistrano'
+gem 'resque', :require => 'resque/server'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -30,7 +31,7 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
-group :test do  
+group :test do
   gem 'vcr'
   gem 'webmock'
 end

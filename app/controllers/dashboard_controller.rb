@@ -5,6 +5,7 @@ class DashboardController < ApplicationController
     if current_user
       Mention.add_tweets_for(current_user)
       @mentions = Mention.get_mentions_for_inbox(current_user)
+      Resque.enqueue(KloutFetchWorker, current_user.id)
     end
   end
 

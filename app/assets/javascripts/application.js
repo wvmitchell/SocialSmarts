@@ -15,12 +15,12 @@
 //= require turbolinks
 //= require_tree .
 
-$(function changeColor() {
-  $(".klout").click(function(e){
-    $("div.klout").addClass('green');
-    e.prevent_default();
-  });
-})
+// $(function changeColor() {
+//   $(".klout").click(function(e){
+//     $("div.klout").addClass('green');
+//     e.prevent_default();
+//   });
+// })
 
 
 $(function(){
