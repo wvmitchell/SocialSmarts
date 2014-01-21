@@ -31,8 +31,6 @@ $(function(){
 
     reply_dropdown.slideToggle('slow');
 
-    console.log(reply_dropdown);
-
     e.preventDefault();
   })
 })
