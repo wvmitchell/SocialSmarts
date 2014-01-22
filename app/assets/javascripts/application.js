@@ -34,3 +34,14 @@ $(function(){
     e.preventDefault();
   })
 })
+
+$(function(){
+  $(".archive_link").on("click", function(){
+    $(this).parents(".smartbox").slideToggle(1000);
+    $.ajax({
+      type: "POST",
+      url: $(this).attr('href')
+    });
+    return false;
+  })
+})

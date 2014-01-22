@@ -53,7 +53,7 @@
           <% if mention.archived == true %>
             <%= link_to image_tag("ss_archive_on-click.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
           <% else %>
-            <%= link_to image_tag("ss_archive.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
+            <%= link_to image_tag("ss_archive.png"), {:action => "archive", :id => mention.id}, {class: 'archive_link', method: 'post'} %>
           <% end %>
         </div>
 
