@@ -35,9 +35,9 @@
 
         <div class="flag">
           <% if mention.flagged == true %>
-            <%= link_to image_tag("ss_flag_on-click.png"), {:action => "flag", :id => mention.id}, method: 'post' %>
+            <%= link_to image_tag("ss_flag_on-click.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
           <% else %>
-            <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, method: 'post' %>
+            <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
           <% end %>
         </div>
 

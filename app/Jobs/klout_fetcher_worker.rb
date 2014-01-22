@@ -1,4 +1,4 @@
-class KloutFetchWorker
+class KloutFetcherWorker
 
   @queue = :klout_fetch
 

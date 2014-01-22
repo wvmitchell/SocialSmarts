@@ -8,6 +8,7 @@ SocialSmarts::Application.routes.draw do
     namespace :v1 do
       resources :mentions, only:[:index, :show]
       resources :klout, only:[:index]
+      post 'update_klout' => 'klout#update_klout'
     end
   end
 
