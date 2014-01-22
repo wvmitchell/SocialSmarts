@@ -1,4 +1,5 @@
 <% @mentions.each do |mention| %>
+  <% cache mention do %>
   <div class="smartbox clearflix">
     <div class="smartbox-inset">
 
@@ -67,4 +68,5 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 <% end %>
