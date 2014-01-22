@@ -1,19 +1,25 @@
 <% @mentions.each do |mention| %>
   <div class="smartbox clearflix">
-    <div class="smartbox-inset">
+    <!-- <div class="smartbox-inset"> -->
 
-    <div class="klout">
-      <p><strong>Klout Score: <%= display_klout_score(mention) %></strong></p>      Followers: <%= mention.followers_count %> </p>
-      Following: <%= mention.friends_count %>
-    </div>
+      <div class="tweeter_details">
+        <div class="tweeter_image">
+          <strong><p><%= "@" + mention.username %></p></strong>
+          <!-- <circle cx="284" cy="213" r="213" /> -->
+            <%= image_tag mention.profile_image_uri, :class => "user_image" %>
+        </div>
 
-    <div class="tweeter_image">
-      <circle cx="284" cy="213" r="213" />
-        <%= image_tag mention.profile_image_uri, :class => "user_image" %>
+        <div class="klout">
+          <p><strong><%= display_klout_score(mention) %></strong></p>
+          <!-- <p id="p1">Klout</p1> -->
+          <p><%=mention.followers_count %></p>
+          <!-- <p id="p1">Followers</p1> -->
+          <p><%= mention.friends_count %></p>
+          <!-- <p id="p1">Following</p1> -->
+        </div>
     </div>
 
     <div class="tweet_text">
-      <strong><p><%= "@" + mention.username %></p></strong>
       <p><%= mention.message %></p>
     </div>
 
@@ -56,7 +62,7 @@
 
       </div>
       </div>
-    </div>
+    <!-- </div> -->
 
   </div>
   <div class="reply_dropdown">
