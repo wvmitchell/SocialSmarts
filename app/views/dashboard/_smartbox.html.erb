@@ -10,12 +10,15 @@
         </div>
 
         <div class="klout">
-          <p><strong><%= display_klout_score(mention) %></strong></p>
-          <!-- <p id="p1">Klout</p1> -->
-          <p><%=mention.followers_count %></p>
-          <!-- <p id="p1">Followers</p1> -->
-          <p><%= mention.friends_count %></p>
-          <!-- <p id="p1">Following</p1> -->
+          <p id="klout_score"><span class="dropt" title="Klout Score">
+            <strong><%= display_klout_score(mention) %></strong>
+          </span></p>
+          <p><span class="dropt" title="Followers">
+            <%=mention.followers_count %>
+          </span></p>
+          <p><span class="dropt" title="Following">
+            <%= mention.friends_count %>
+          </span></p>
         </div>
     </div>
 
@@ -28,36 +31,40 @@
         <p><%= pretty_time(mention) %></p>
       </div>
       <div class="action_icons">
-        <div class="retweet">
+        <div class="retweet"><span class="dropt" title="Retweet">
           <% if mention.retweeted == true %>
           <%= link_to image_tag("ss_retweet_on-click.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
           <% else %>
           <%= link_to image_tag("ss_retweet.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
           <% end %>
+        </span>
         </div>
 
-        <div class="flag">
+        <div class="flag"><span class="dropt" title="Flagged">
           <% if mention.flagged == true %>
             <%= link_to image_tag("ss_flag_on-click.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
           <% else %>
             <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
           <% end %>
+        </span>
         </div>
 
-        <div class="respond" id="reply">
+        <div class="respond" id="reply"><span class="dropt" title="Reply">
           <% if mention.responded == true %>
             <%= image_tag("ss_reply_on-click.png") %>
           <% else %>
             <%= link_to image_tag("ss_reply.png"), "#", {:class => 'respond_link'} %>
           <% end %>
+        </span>
         </div>
 
-        <div class="archive">
+        <div class="archive"><span class="dropt" title="Archive">
           <% if mention.archived == true %>
             <%= link_to image_tag("ss_archive_on-click.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
           <% else %>
             <%= link_to image_tag("ss_archive.png"), {:action => "archive", :id => mention.id}, {class: 'archive_link', method: 'post'} %>
           <% end %>
+        </span>
         </div>
 
       </div>

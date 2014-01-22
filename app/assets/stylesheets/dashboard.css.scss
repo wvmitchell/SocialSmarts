@@ -97,35 +97,40 @@
   margin-left: 25px;
 }
 
+// .dropt {
+// //   span.dropt {border-bottom: thin dotted; background: #ffeedd;}
+// //   span.dropt:hover {text-decoration: none; background: #ffffff; z-index: 6; }
+// //   span.dropt span {position: absolute; left: -9999px;
+// //     margin: 20px 0 0 0px; padding: 3px 3px 3px 3px;
+// //     border-style:solid; border-color:black; border-width:1px; z-index: 6;}
+//   span.dropt:hover span {left: 2%; background: #ffffff;} 
+//   span.dropt span {position: absolute; left: -9999px;
+//     margin: 4px 0 0 0px; padding: 3px 3px 3px 3px; 
+//     border-style:solid; border-color:black; border-width:1px;}
+//   // span.dropt:hover span {margin: 1px 0 0 5px; background: #ffffff; z-index:6;} 
+// }
+
 .klout p {
-  float: left;
-  margin-top: 47px;
+  // float: left;
+  // margin-top: 47px;
   // color: white;
-  // margin-left: 50px;
+  margin-left: 90px;
   // margin-right: 1px;
-  padding: 1px;
-  // font-size: 1em;
+  padding: 2px;
+  font-size: .9em;
   text-align: center;
   background-color: #DBF0F4;
 }
 
-// .klout #p1 {
-//   float: right;
-//   color: red;
-// }
-
-// .klout #p1:hover {
-//   color: black
-// }
-
 #klout_score {
-  color: #E7A622;
+  background-color: #DB5C40;
+  color: white;
 }
 
 .tweeter_image {
   float: left;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   margin-top: -20px;
 }
 
@@ -149,9 +154,9 @@
   margin-top: -13px;
   padding-left: 10px;
   position: relative; 
-  left: 10%;
+  left: 6%;
   height: 120px;
-  width: 49%;
+  width: 51%;
 }
 
 .sort_options {
