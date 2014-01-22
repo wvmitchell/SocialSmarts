@@ -1,22 +1,22 @@
 <% @mentions.each do |mention| %>
+  <% cache mention do %>
   <div class="smartbox clearflix">
     <!-- <div class="smartbox-inset"> -->
 
       <div class="tweeter_details">
         <div class="tweeter_image">
           <strong><p><%= "@" + mention.username %></p></strong>
-          <!-- <circle cx="284" cy="213" r="213" /> -->
             <%= image_tag mention.profile_image_uri, :class => "user_image" %>
         </div>
 
         <div class="klout">
-          <p id="klout_score"><span class="dropt" title="Klout Score">
+          <p id="klout_score"><span title="Klout Score">
             <strong><%= display_klout_score(mention) %></strong>
           </span></p>
-          <p><span class="dropt" title="Followers">
+          <p><span title="Followers">
             <%=mention.followers_count %>
           </span></p>
-          <p><span class="dropt" title="Following">
+          <p><span title="Following">
             <%= mention.friends_count %>
           </span></p>
         </div>
@@ -31,7 +31,7 @@
         <p><%= pretty_time(mention) %></p>
       </div>
       <div class="action_icons">
-        <div class="retweet"><span class="dropt" title="Retweet">
+        <div class="retweet"><span title="Retweet">
           <% if mention.retweeted == true %>
           <%= link_to image_tag("ss_retweet_on-click.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
           <% else %>
@@ -40,7 +40,7 @@
         </span>
         </div>
 
-        <div class="flag"><span class="dropt" title="Flagged">
+        <div class="flag"><span title="Flagged">
           <% if mention.flagged == true %>
             <%= link_to image_tag("ss_flag_on-click.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
           <% else %>
@@ -49,7 +49,7 @@
         </span>
         </div>
 
-        <div class="respond" id="reply"><span class="dropt" title="Reply">
+        <div class="respond" id="reply"><span title="Reply">
           <% if mention.responded == true %>
             <%= image_tag("ss_reply_on-click.png") %>
           <% else %>
@@ -58,7 +58,7 @@
         </span>
         </div>
 
-        <div class="archive"><span class="dropt" title="Archive">
+        <div class="archive"><span title="Archive">
           <% if mention.archived == true %>
             <%= link_to image_tag("ss_archive_on-click.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
           <% else %>
@@ -80,4 +80,5 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 <% end %>
