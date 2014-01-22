@@ -1,8 +1,6 @@
 <% @mentions.each do |mention| %>
   <% cache mention do %>
   <div class="smartbox clearflix">
-    <!-- <div class="smartbox-inset"> -->
-
       <div class="tweeter_details">
         <div class="tweeter_image">
           <strong><p><%= "@" + mention.username %></p></strong>
@@ -32,53 +30,30 @@
       </div>
       <div class="action_icons">
         <div class="retweet"><span title="Retweet">
-          <% if mention.retweeted == true %>
-          <%= link_to image_tag("ss_retweet_on-click.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
-          <% else %>
-          <%= link_to image_tag("ss_retweet.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
-          <% end %>
+          <%= display_retweet_button(mention) %>
         </span>
         </div>
 
         <div class="flag"><span title="Flagged">
-          <% if mention.flagged == true %>
-            <%= link_to image_tag("ss_flag_on-click.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
-          <% else %>
-            <%= link_to image_tag("ss_flag.png"), {:action => "flag", :id => mention.id}, {class: 'flag_link', method: 'post'} %>
-          <% end %>
+          <%= display_flagged_button(mention) %>
         </span>
         </div>
 
         <div class="respond" id="reply"><span title="Reply">
-          <% if mention.responded == true %>
-            <%= image_tag("ss_reply_on-click.png") %>
-          <% else %>
-            <%= link_to image_tag("ss_reply.png"), "#", {:class => 'respond_link'} %>
-          <% end %>
+          <%= display_reply_button(mention) %>
         </span>
         </div>
 
         <div class="archive"><span title="Archive">
-          <% if mention.archived == true %>
-            <%= link_to image_tag("ss_archive_on-click.png"), {:action => "archive", :id => mention.id}, method: 'post' %>
-          <% else %>
-            <%= link_to image_tag("ss_archive.png"), {:action => "archive", :id => mention.id}, {class: 'archive_link', method: 'post'} %>
-          <% end %>
+          <%= display_archive_button(mention) %>
         </span>
         </div>
-
       </div>
       </div>
-    <!-- </div> -->
 
   </div>
-  <div class="reply_dropdown">
-    <div class="reply_form">
-      <%= form_tag("/reply/#{mention.id}") do %>
-        <p><%=text_area_tag 'respond', nil, :rows => "2", :cols => "70", :size => 145, :placeholder => 'Input reply here',:maxlength => 140 %></p>
-         <p><%= submit_tag 'Reply' %></p>
-      <% end %>
-    </div>
-  </div>
+
+  <%= render partial: "reply_dropdown", locals: {mention: mention} %>
+
   <% end %>
 <% end %>
