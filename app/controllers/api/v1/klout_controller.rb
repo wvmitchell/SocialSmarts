@@ -1,6 +1,6 @@
 class API::V1::KloutController < ApplicationController
   respond_to :json
-  
+
   def index
     respond_with Mention.where(username: params[:user]).first.klout
   end
