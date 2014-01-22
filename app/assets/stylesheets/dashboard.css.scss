@@ -31,15 +31,14 @@
 
 .sort_tab_names li {
   float: left;
+  letter-spacing: 1px;
   height: 35px;
   list-style:none;
   padding: 15px 20px 0px 19px;
   margin-top: -14px;
   margin-left: -39px;
   text-align:center;
-  // width: 197px;
   width: 25%;
-
 }
 
 .sort_tab_names li a {
@@ -76,28 +75,15 @@
 .smartbox {
   border-color: #E4EAEB;
   border-style: solid;
-  border-width: 0px 0px 3px 0px;
+  border-width: 0px 0px 2px 0px;
   clip-path: url(profile_image_uri);
   height: 95px;
   float: none;
   position: relative;
   width: 830px;
   padding: 10px 0px 10px 0px;
-  // border: solid 1px;
   overflow: hidden;
 }
-
-// .smartbox.clearfix {
-//   height: 100%;
-//   position: relative;
-//   width: 100%;
-// }
-
-// .smartbox .smartbox-inset {
-//   padding: 10px 0px 10px 0px;
-//   position: relative;
-//   width: 100%
-// }
 
 .tweeter_details {
   float: left;
@@ -110,12 +96,10 @@
   margin-left: 1px;
   margin-right: 1px;
   padding: 2px;
-
   font-size: 1em;
   text-align: center;
-
-  background-color: #B8E3ED;
-}
+  background-color: #DBF0F4;
+  }
 
 #klout_score {
   color: #E7A622;
@@ -123,9 +107,6 @@
 
 .tweeter_image {
   float: left;
-  // border-style: solid;
-  // border-width: 2px;
-  // border-color: white;
   height: 50px;
   width: 50px;
   margin-top: -20px;
@@ -144,10 +125,9 @@
 }
 
 .tweet_text {
-  // font-size: 1.1em;
   border-style: solid;
   border-width: 0px 1px 0px 1px;
-  border-color: #E4EAEB;
+  border-color: #EDF4F5;
   float: left;
   margin-top: -13px;
   padding-left: 10px;
@@ -159,9 +139,6 @@
 
 .sort_options {
   float: right;
-  // border-style: solid;
-  // border-width: 0px 0px 0px 1px;
-  // border-color: black;
   height: 80px;
   width: 190px;
   margin: 15px;
