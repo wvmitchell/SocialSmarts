@@ -98,34 +98,35 @@
 }
 
 .klout p {
-  float: left;
-  margin-top: 47px;
+  // float: left;
+  // margin-top: 47px;
   // color: white;
-  // margin-left: 50px;
+  // margin-top: -5px;
+  margin-left: 110px;
   // margin-right: 1px;
-  padding: 1px;
-  // font-size: 1em;
+  padding: 3px;
+  font-size: .9em;
   text-align: center;
   background-color: #DBF0F4;
+
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
 }
 
-// .klout #p1 {
-//   float: right;
-//   color: red;
-// }
-
-// .klout #p1:hover {
-//   color: black
-// }
-
 #klout_score {
-  color: #E7A622;
+  background-color: #DB5C40;
+  color: white;
+
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
 }
 
 .tweeter_image {
   float: left;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   margin-top: -20px;
 }
 
@@ -149,9 +150,9 @@
   margin-top: -13px;
   padding-left: 10px;
   position: relative; 
-  left: 10%;
+  left: 3%;
   height: 120px;
-  width: 49%;
+  width: 51%;
 }
 
 .sort_options {
