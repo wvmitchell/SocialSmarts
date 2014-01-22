@@ -35,12 +35,4 @@ describe "dashboard index" do
     expect(page).to have_content 'This is a Tweet'
   end
 
-  xit "retweets mentions" do
-    FactoryGirl.create(:mention)
-    FactoryGirl.create(:mention)
-
-    visit login_path
-    click_on "Sign in with Twitter"
-  end
-
 end

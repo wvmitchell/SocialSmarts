@@ -1,22 +1,17 @@
 <% @mentions.each do |mention| %>
   <% cache mention do %>
   <div class="smartbox clearflix">
-    <!-- <div class="smartbox-inset"> -->
 
       <div class="tweeter_details">
         <div class="tweeter_image">
           <strong><p><%= "@" + mention.username %></p></strong>
-          <!-- <circle cx="284" cy="213" r="213" /> -->
             <%= image_tag mention.profile_image_uri, :class => "user_image" %>
         </div>
 
         <div class="klout">
           <p><strong><%= display_klout_score(mention) %></strong></p>
-          <!-- <p id="p1">Klout</p1> -->
           <p><%=mention.followers_count %></p>
-          <!-- <p id="p1">Followers</p1> -->
           <p><%= mention.friends_count %></p>
-          <!-- <p id="p1">Following</p1> -->
         </div>
     </div>
 
@@ -31,9 +26,9 @@
       <div class="action_icons">
         <div class="retweet">
           <% if mention.retweeted == true %>
-          <%= link_to image_tag("ss_retweet_on-click.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
+          <%= link_to image_tag("ss_retweet_on-click.png"), retweet_path(mention.id), method: 'post' %>
           <% else %>
-          <%= link_to image_tag("ss_retweet.png"), {:action => "retweet", :id => mention.id}, method: 'post' %>
+          <%= link_to image_tag("ss_retweet.png"), retweet_path(mention.id), method: 'post' %>
           <% end %>
         </div>
 
@@ -63,7 +58,6 @@
 
       </div>
       </div>
-    <!-- </div> -->
 
   </div>
   <div class="reply_dropdown">

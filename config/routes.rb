@@ -18,7 +18,7 @@ SocialSmarts::Application.routes.draw do
   get 'flagged_page' => 'dashboard#flagged_page'
   get 'replied_to' => 'dashboard#replied_to'
   post "/archive/:id" => "dashboard#archive"
-  post "/retweet/:id" => "dashboard#retweet"
+  post "/retweet/:id" => "dashboard#retweet", as: 'retweet'
   post "/flag/:id" => "dashboard#flag"
   post "/reply/:id" => "dashboard#reply"
 
