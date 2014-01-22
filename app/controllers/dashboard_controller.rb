@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
     if current_user
       Resque.enqueue(MentionFetcherWorker, current_user.id)
       @mentions = Mention.get_mentions_for_inbox(current_user)
-      Resque.enqueue(KloutFetchWorker, current_user.id)
+      Resque.enqueue(KloutFetcherWorker, current_user.id)
     end
   end
 

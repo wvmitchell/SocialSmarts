@@ -13,6 +13,7 @@ gem 'twitter', '~> 5.0'
 gem 'faraday'
 gem 'capistrano'
 gem 'resque'
+gem 'whenever', :require => false
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
