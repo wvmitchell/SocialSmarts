@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.klout.com/v2/identity.json/twitter?key=fqxe7xbaethdy4xp8rmggvwp&screenName=weesie_b
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Jan 2014 20:45:55 GMT
+      Server:
+      - Mashery Proxy
+      X-Mashery-Responder:
+      - prod-j-worker-us-west-1b-18.mashery.com
+      Content-Length:
+      - '51'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "206321174689880691",
+          "network": "ks"
+        }
+    http_version: 
+  recorded_at: Wed, 22 Jan 2014 20:45:55 GMT
+- request:
+    method: get
+    uri: http://api.klout.com/v2/user.json/206321174689880691/score?key=fqxe7xbaethdy4xp8rmggvwp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 22 Jan 2014 20:45:55 GMT
+      Server:
+      - Mashery Proxy
+      X-Mashery-Responder:
+      - prod-j-worker-us-west-1b-20.mashery.com
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "score": 30.511639305316123,
+          "scoreDelta": {
+            "dayChange": -0.044177394956790295,
+            "weekChange": 2.4976557327086795,
+            "monthChange": 3.5528106055585624
+          },
+          "bucket": "30-39"
+        }
+    http_version: 
+  recorded_at: Wed, 22 Jan 2014 20:45:55 GMT
+recorded_with: VCR 2.8.0

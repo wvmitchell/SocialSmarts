@@ -6,12 +6,12 @@ describe KloutFetcher do
     @user = 'weesie_b'
   end
 
-  xit "returns a klout score informarion for a @user" do
+  it "returns a klout score informarion for a @user", :vcr do
     score_hash = @fetcher.get_score_information_for(@user)
     score_hash.keys.should include('score')
   end
 
-  xit "returns a klout score for a @user" do
-    score = @fetcher.get_score_for(@user) 
+  it "returns a klout score for a @user", :vcr do
+    score = @fetcher.get_score_for(@user)
   end
 end

@@ -60,6 +60,13 @@
    //    box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
+.active_tab {
+  background-color: #8BD5EB;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  -moz-border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
 #content-main {
   background-color: white;
   border-color: #E4EAEB;
@@ -98,34 +105,30 @@
 }
 
 .klout p {
-  float: left;
-  margin-top: 47px;
-  // color: white;
-  // margin-left: 50px;
-  // margin-right: 1px;
-  padding: 1px;
-  // font-size: 1em;
+  margin-left: 110px;
+  padding: 3px;
+  font-size: .9em;
   text-align: center;
   background-color: #DBF0F4;
+
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
 }
 
-// .klout #p1 {
-//   float: right;
-//   color: red;
-// }
-
-// .klout #p1:hover {
-//   color: black
-// }
-
 #klout_score {
-  color: #E7A622;
+  background-color: #DB5C40;
+  color: white;
+
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
 }
 
 .tweeter_image {
   float: left;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   margin-top: -20px;
 }
 
@@ -146,12 +149,13 @@
   border-width: 0px 1px 0px 1px;
   border-color: #EDF4F5;
   float: left;
+  // font-size: 1.5em;
   margin-top: -13px;
   padding-left: 10px;
   position: relative; 
-  left: 10%;
+  left: 3%;
   height: 120px;
-  width: 49%;
+  width: 51%;
 }
 
 .sort_options {
