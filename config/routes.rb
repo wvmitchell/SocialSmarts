@@ -17,6 +17,7 @@ SocialSmarts::Application.routes.draw do
   get 'archived_page' => 'dashboard#archived_page'
   get 'flagged_page' => 'dashboard#flagged_page'
   get 'replied_to' => 'dashboard#replied_to'
+  get 'latest_mentions' => 'dashboard#latest_mentions'
   post "/archive/:id" => "dashboard#archive"
   post "/retweet/:id" => "dashboard#retweet", as: 'retweet'
   post "/flag/:id" => "dashboard#flag"

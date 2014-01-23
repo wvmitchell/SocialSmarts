@@ -2,6 +2,10 @@
 
   <%= render partial: "sort_tab" %>
 
+  <div id="tweet_notifier">
+    <a href=''><p>You have <span></span> new mentions.</p></a>
+  </div>
+
   <div id="content-main">
     <%= render partial: "smartbox", locals: {mentions: @mentions} %>
   </div>

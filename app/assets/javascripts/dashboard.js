@@ -34,8 +34,17 @@
     });
   });
 
-  $(window).load(function(){
-    console.log(window.location.pathname);
-  });
+  setInterval(function(){
+    $.ajax({
+      type: "GET",
+      url: "latest_mentions"
+    }).success(function(data){
+      var current = $(".smartbox").length
+      if(data-current > 0){
+        $("#tweet_notifier").fadeIn(1000);
+        $("#tweet_notifier span").text(data - current);
+      }
+    });
+  },1000);
 
 }());
