@@ -13,6 +13,7 @@ gem 'twitter', '~> 5.0'
 gem 'faraday'
 gem 'capistrano'
 gem 'resque'
+gem 'rake'
 gem 'whenever', :require => false
 gem 'coveralls', require: false
 
