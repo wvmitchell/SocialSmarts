@@ -11,28 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140118223525) do
+ActiveRecord::Schema.define(version: 20140123011131) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "mentions", force: true do |t|
     t.string   "username"
     t.float    "klout"
     t.string   "message"
     t.datetime "tweet_timestamp"
-    t.boolean  "responded",         default: false
-    t.boolean  "archived",          default: false
+    t.boolean  "responded",                   default: false
+    t.boolean  "archived",                    default: false
     t.boolean  "favorited"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "profile_image_uri"
-    t.integer  "tweet_id"
-    t.boolean  "flagged",           default: false
-    t.boolean  "retweeted",         default: false
+    t.integer  "tweet_id",          limit: 8
+    t.boolean  "flagged",                     default: false
+    t.boolean  "retweeted",                   default: false
     t.integer  "followers_count"
     t.integer  "friends_count"
   end
 
-  add_index "mentions", ["archived"], name: "index_mentions_on_archived"
+  add_index "mentions", ["archived"], name: "index_mentions_on_archived", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider"

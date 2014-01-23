@@ -23,6 +23,12 @@ class Mention < ActiveRecord::Base
     end
   end
 
+  def self.get_klout_score_for_mentions
+    Mention.get_unklouted_mentions.each do |mention|
+      Resque.enqueue(KloutFetcherWorker, mention.id)
+    end
+  end
+
   def self.get_unarchived_mentions_for(user)
     self.where(user_id: user.id, archived: false)
   end
@@ -33,6 +39,10 @@ class Mention < ActiveRecord::Base
 
   def self.get_mentions_for_inbox(user)
     self.where(user_id: user.id, flagged: false, archived: false)
+  end
+
+  def self.get_unklouted_mentions
+    Mention.where(klout: nil)
   end
 
   def send_to_archived
@@ -47,6 +57,12 @@ class Mention < ActiveRecord::Base
 
   def mark_replied
     self.responded = true
+    self.save
+  end
+
+  def update_klout
+    kf = KloutFetcher.new
+    self.klout = kf.get_score_for(self.username)
     self.save
   end
 end
