@@ -1,5 +1,4 @@
 class KloutFetcherWorker
-
   @queue = :klout_fetch
 
   def self.perform(mention_id)
@@ -7,5 +6,4 @@ class KloutFetcherWorker
     mention.update_klout
     sleep(1)
   end
-
 end

@@ -25,7 +25,10 @@ class Mention < ActiveRecord::Base
 
   def self.get_klout_score_for_mentions
     Mention.get_unklouted_mentions.each do |mention|
-      Resque.enqueue(KloutFetcherWorker, mention.id)
+      mention = Mention.find(mention.id)
+      mention.update_klout
+      sleep(1)
+      # Resque.enqueue(KloutFetcherWorker, mention.id)
     end
   end
 
