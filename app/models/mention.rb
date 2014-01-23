@@ -59,4 +59,10 @@ class Mention < ActiveRecord::Base
     self.responded = true
     self.save
   end
+
+  def update_klout
+    kf = KloutFetcher.new
+    self.klout = kf.get_score_for(self.username)
+    self.save
+  end
 end
