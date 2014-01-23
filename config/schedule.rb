@@ -1,9 +1,9 @@
 set :output, "#{path}/log/cron.log"
 
 every 2.minutes do
-  rake "social_smarts:enqueue_m_fetcher_worker"
+  runner "User.get_mentions_for_users"
 end
 
 every 1.minute do
-  rake "social_smarts:enqueue_f_fetcher_worker"
+  runner "Mention.get_klout_score_for_mentions"
 end
