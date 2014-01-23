@@ -16,4 +16,4 @@
 /tmp
 
 # Ignore redis dump.rdb
-/dump.rdb
+dump.rdb
