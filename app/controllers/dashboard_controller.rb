@@ -45,4 +45,8 @@ class DashboardController < ApplicationController
     @mentions = Mention.where(responded: true, archived: false, user_id: current_user.id)
   end
 
+  def latest_mentions
+    render :text => Mention.get_mentions_for_inbox(current_user).count
+  end
+
 end
