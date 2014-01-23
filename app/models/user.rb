@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
       user.access_secret = auth["extra"]["access_token"].secret
     end
   end
+
+  def self.get_mentions_for_users
+    User.all.each do |user|
+      Resque.enqueue(MentionFetcherWorker, user.id)
+    end
+  end
+
 end
