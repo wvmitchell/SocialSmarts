@@ -75,7 +75,8 @@ h1 {
 }
 
 body {
-  background-image:url('ss_bg_pattern.jpg');
+  background-image:url('ss_bg_pattern_tile2.gif');
+  background-repeat:repeat;
   background-attachment: fixed;
   font-family: $font-family-base;
   font-size: .85em;
