@@ -4,10 +4,8 @@ class KloutFetcherWorker
 
   def self.perform(user_id)
     mentions = Mention.where(klout: nil, user_id: user_id)
-    kf = KloutFetcher.new
-    mentions.each do |m|
-      m.klout = kf.get_score_for(m.username)
-      m.save
+    mentions.each do |mention|
+      mention.update_klout
       sleep(1)
     end
   end
